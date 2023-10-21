@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,1000;1,9..40,300;1,9..40,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    background-color: rgba(18, 18, 18, 1);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 1);
+    padding: 20px 8%;
+    box-sizing: border-box;
+}
+
+.menu {
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.home-content {
+    display: flex;
+    align-items: stretch;
+    margin-top: 40px;
+}
+
+.img-contenthome{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+}
+
+.contenthome-image {
+    width: 100%;
+    cursor:pointer;
+    margin-top: 60px;
+    margin-right: 30px;
+}
+
+.text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.textocontent {
+    max-width: 400px;
+    text-align: left;
+    margin-top: 60px;
+}
+
+.textocontent h1 {
+    font-size: 50px;
+    margin-top: 60px;
+    font-weight: 1000;
+    color: white;
+}
+
+.textocontent h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-top: 20px;
+}
+
+.button-content {
+    align-self: flex-end;
+    margin-top: 30px;
+    margin-right: 150px;
+}
+
+#btnConferirProduto {
+    display: inline-block;
+    background-color: #156513;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.home-content2{
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+#btnSuporte{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
