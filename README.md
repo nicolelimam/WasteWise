@@ -1,1 +1,1 @@
-# Lixeira-Inteligente---ACELERA-4ADS
+# Lixeira Inteligente - ACELERA-4ADS
