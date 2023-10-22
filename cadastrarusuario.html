@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="cadus.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar"> <!-- Criando um conteiner/divisão que engloba tudo o que está na barra de navegação -->
+            <div class="logo"> <!-- Criando um conteiner/divisão para colocar o logotipo do site -->
+                <img src="WasteWise.png" alt="Logo" class="logo-image">
+            </div>
+            <nav> <!-- Criando uma estrutura de lista/barra de navegação dos itens da barra -->
+                <ul>
+                    <li><a href="index.html">Voltar ao início</a></li> <!-- Botão para voltar para a pagina principal sem conta -->
+                </ul>
+            </nav>
+        </div>
+        <div class="cadform">
+            <div class="textocontent"> <!-- Só texto da pagina -->
+                <br><h1>Cadastre-se</h1> 
+                <h3>Crie sua conta e aproveite todos os benefícios que a WasteWise oferece.</h3>
+            </div>
+            <div class="formulario"> <!-- Formulario de cadastro -->
+                <label class="lbform">Nome</label><br>
+                <input type="text" name="campoNome" class="campotxt"><br>
+                <label class="lbform">E-mail</label><br>
+                <input type="text" name="campoEmail" class="campotxt"><br>
+                <label class="lbform">Senha</label><br>
+                <input type="password" name="campoSenha" class="campotxt"><br>
+                <label class="lbform">Confirme sua senha</label><br>
+                <input type="password" name="confirmaSenha" class="campotxt"><br> <!-- Adicionar algoritmo de comparação de senha aqui -->
+                <input type="submit" value="Criar minha conta" class="criar-conta"><br> <!-- Botão pra enviar informações pro bd -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
