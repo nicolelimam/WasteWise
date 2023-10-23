@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="cadus.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="configsenha.js"></script>
     <title>Cadastro</title>
 </head>
 <body>
@@ -32,8 +33,9 @@
                 <label class="lbform">Senha</label><br>
                 <input type="password" name="campoSenha" class="campotxt"><br>
                 <label class="lbform">Confirme sua senha</label><br>
-                <input type="password" name="confirmaSenha" class="campotxt"><br> <!-- Adicionar algoritmo de comparação de senha aqui -->
-                <input type="submit" value="Criar minha conta" class="criar-conta"><br> <!-- Botão pra enviar informações pro bd -->
+                <input type="password" name="confirmaSenha" class="campotxt" oninput="checarSenha()"><br> <!-- Adicionar algoritmo de comparação de senha aqui -->
+                <span id="message"></span>
+                <button type="submit" class="criar-conta">Criar conta</button><br> <!-- Botão pra enviar informações pro bd -->
             </div>
         </div>
     </div>
