@@ -11,10 +11,11 @@ body {
 
 .container {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background-color: rgba(18, 18, 18, 1);
     padding: 20px 8%;
     box-sizing: border-box;
+    position: relative;
 }
 
 .navbar {
@@ -25,9 +26,10 @@ body {
 }
 
 .logo {
-    margin-top: 10px;
+    width: 200px;
     display: flex;
     align-items: center;
+    margin-top: 30px;
 }
 
 .logo-image {
@@ -38,7 +40,16 @@ body {
 nav {
     flex: 1;
     text-align: right;
+    margin-top: 30px;
 }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 nav ul li {
     list-style: none;
     display: inline-block;
@@ -46,11 +57,22 @@ nav ul li {
 }
 
 nav ul li a {
-    margin-top: 50px;
     text-decoration: none;
     color: white;
     font-size: 18px;
     font-weight: 700;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.left, .right {
+    flex: 1;
 }
 
 .titulopag h1 {
@@ -86,12 +108,12 @@ nav ul li a {
     max-height: 300px;
 }
 
-#btnComprar, #btnInfo {
+#btnComprar {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 150px;
+    width: 240px;
     padding: 10px;
     text-align: center;
     border-radius: 30px;
@@ -100,11 +122,44 @@ nav ul li a {
 }
 
 #btnComprar {
-    margin-bottom: 70px;
+    margin-left: 100px;
     background-color: #156513;
 }
+/* Estilizando a parte direita da página */
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute; 
+    right: 8%; 
+    top: 20px; 
+    width: 40%; 
+    margin-top: 140px;
+    margin-right: 200px;
+}
 
-#btnInfo {
-    background-color: #156513;
-    margin-bottom: 20px;
+.infolixeira {
+    color: white;
+}
+
+.infolixeira h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.infolixeira h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.lbinfo {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.lbinfo:nth-last-of-type(2) {
+    display: block;
+    margin-top: 10px;
 }

@@ -36,6 +36,12 @@
                 <input type="password" name="confirmaSenha" class="campotxt" oninput="checarSenha()"><br> <!-- Adicionar algoritmo de comparação de senha aqui -->
                 <span id="message"></span>
                 <button type="submit" class="criar-conta">Criar conta</button><br> <!-- Botão pra enviar informações pro bd -->
+                <script>
+                    function redirecionarPag() { 
+                        // Função pra redirecionar para a página do usuario logado
+                        window.location.href = "home.html";
+                    }
+                </script>
             </div>
         </div>
     </div>

@@ -29,7 +29,13 @@
             <input type="text" name="campoEmail" class="campotxt"><br>
             <label class="lbform">Senha</label><br>
             <input type="password" name="campoSenha" class="campotxt"><br>
-            <input type="submit" value="Entrar" class="loginbtn"><br> <!-- Botão pra confirmar login -->
+            <input type="submit" value="Entrar" class="loginbtn" onclick="redirecionarPag()"><br> <!-- Botão pra confirmar login -->
+            <script>
+                function redirecionarPag() { 
+                    // Função pra redirecionar para a página do usuario logado
+                    window.location.href = "home.html";
+                }
+            </script>
         </div>
     </div>
 </body>

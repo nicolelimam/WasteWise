@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,1000;1,9..40,300;1,9..40,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    background-color: rgba(18, 18, 18, 1);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(18, 18, 18, 1);
+    padding: 20px 8%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.navbar {
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.logo-image {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    margin-top: 30px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#btnPerfil {
+    margin-left: 10px;
+}
+
+#btnSair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 35px;
+    background-color: #156513;
+    border-radius: 30px;
+    border-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.contaUser {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#iconuser {
+    width: 30px;
+    height: 30px;
+}
+
+.lbuser {
+    font-size: 18px;
+    font-weight: 1000;
+    color: white;
+    margin-left: 10px;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.titulopag h1 {
+    margin-top: 60px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white; 
+    text-align: left;
+}
+
+.produto {
+    background: linear-gradient(to bottom, #ffffff, #121212);
+    border-radius: 30px;
+    border: transparent;
+    padding: 20px;
+    margin-top: 50px;
+    width: 500px;
+    height: 450px;
+}
+
+.produto h2 {
+    color: #121212;
+}
+
+.imgProduto {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.imgProduto img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.produto a {
+    display: inline-block;
+    background-color: #156513;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    align-self: center;
+    text-align: center;
+    margin-left: 150px;
+}
+
+/* Estilizando a parte direita da página */
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute; 
+    right: 8%; 
+    top: 20px; 
+    width: 40%; 
+    margin-top: 140px;
+    margin-right: 200px;
+}
+
+.infolixeira {
+    color: white;
+}
+
+.infolixeira h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.infolixeira h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.lbinfo {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.lbinfo:nth-last-of-type(2) {
+    display: block;
+    margin-top: 10px;
+}
