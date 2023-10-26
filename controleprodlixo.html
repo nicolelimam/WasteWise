@@ -16,9 +16,20 @@
             <nav>
                 <ul>
                     <li><a href="home.html">Voltar ao início</a></li>
-                    <li class="contaUser"><label class="lbuser">Olá, @User</label> <a href="" class="btnPerfil" id="btnPerfil">
-                        <img src="user.png" id="iconuser" width="30" height="30">
-                    </a></li>
+                    <li class="contaUser">
+                        <label class="lbuser">Olá, @User</label>
+                        <a href="meuperfil.html" class="btnPerfil" id="btnPerfil">
+                            <div class="iconuser" id="iconuser"></div>
+                            <script>
+                                // Script para puxar foto do usuario da pasta local
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    var userImageURL = "usuarioex.jpg";
+                                    var iconuser = document.getElementById("iconuser");
+                                    iconuser.style.backgroundImage = `url('${userImageURL}')`;
+                                });
+                            </script>
+                        </a>
+                    </li>
                     <li><a href="index.html" class="btnSair" id="btnSair">Sair</a></li>
                 </ul>
             </nav>

@@ -63,10 +63,6 @@ nav ul li a {
     font-weight: 700;
 }
 
-#btnPerfil {
-    margin-left: 10px;
-}
-
 #btnSair {
     display: flex;
     justify-content: center;
@@ -81,119 +77,93 @@ nav ul li a {
     color: white;
 }
 
-.contaUser {
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.iconuser {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: lightgray;
-    background-size: cover;
-}
-
-.lbuser {
-    font-size: 18px;
-    font-weight: 1000;
-    color: white;
-    margin-left: 10px;
-}
-
 .left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-right: 20px;
+    float: left;
+    width: 40%;
 }
 
-.left, .right {
-    flex: 1;
-}
-
-.titulopag h1 {
-    margin-top: 30px;
+.left h1 {
+    color: white;
     font-size: 30px;
     font-weight: 700;
-    color: white; 
-    text-align: left;
-}
-
-.produto {
-    background: linear-gradient(to bottom, #ffffff, #121212);
-    border-radius: 30px;
-    border: transparent;
-    padding: 20px;
-    margin-top: 30px;
-    width: 500px;
-    height: 450px;
-}
-
-.produto h2 {
-    color: #121212;
-}
-
-.imgProduto {
-    text-align: center;
     margin-top: 20px;
-}
-
-.imgProduto img {
-    max-width: 300px;
-    max-height: 300px;
-}
-
-.produto a {
-    display: inline-block;
-    background-color: #156513;
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    align-self: center;
-    text-align: center;
-    margin-left: 150px;
-}
-
-/* Estilizando a parte direita da página */
-.right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute; 
-    right: 8%; 
-    top: 20px; 
-    width: 40%; 
-    margin-top: 160px;
-    margin-right: 100px;
-}
-
-.infolixeira {
-    color: white;
-}
-
-.infolixeira h2 {
-    font-size: 30px;
-    font-weight: 700;
     margin-bottom: 10px;
 }
 
-.infolixeira h3 {
-    font-size: 20px;
+.fotoperfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: lightgray; 
+    background-size: cover; 
+    background-position: center;
+}
+
+#btnFotoPerfil {
+    background-color: transparent;
+    border: transparent;
+    color: white;
     font-weight: 700;
+    text-align: center;
+    margin-left: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.right {
+    float: right;
+    width: 60%;
+    margin-top: 50px;
+}
+
+h2 {
+    font-weight: 700;
+    color: white;
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .lbinfo {
-    font-weight: 300;
+    color: white;
     font-size: 20px;
-    margin-bottom: 10px;
+    font-weight: 300;
 }
 
-.lbinfo:nth-last-of-type(2) {
-    display: block;
-    margin-top: 10px;
+
+#btnAlterarNome {
+    border: transparent;
+    background-color: transparent;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 250px;
+}
+
+#btnAlterarEmail {
+    border: transparent;
+    background-color: transparent;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 228px;
+}
+
+#btnAlterarEndereco {
+    border: transparent;
+    background-color: transparent;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 133px;
 }

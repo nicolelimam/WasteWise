@@ -86,9 +86,12 @@ nav ul li a {
     align-items: center;
 }
 
-#iconuser {
+.iconuser {
     width: 30px;
     height: 30px;
+    border-radius: 50%;
+    background-color: lightgray;
+    background-size: cover;
 }
 
 .lbuser {

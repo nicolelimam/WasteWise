@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,1000;1,9..40,300;1,9..40,500&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +15,7 @@ body {
     background-color: rgba(18, 18, 18, 1);
     padding: 20px 8%;
     box-sizing: border-box;
+    position: relative;
 }
 
 .navbar {
@@ -23,7 +23,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
 }
 
 .logo {
@@ -42,7 +41,6 @@ nav {
     flex: 1;
     text-align: right;
     margin-top: 30px;
-
 }
 
 nav ul {
@@ -53,6 +51,8 @@ nav ul {
 }
 
 nav ul li {
+    list-style: none;
+    display: inline-block;
     margin-left: 30px;
 }
 
@@ -102,33 +102,107 @@ nav ul li a {
     margin-left: 10px;
 }
 
-.panelgraficos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 95%;
-    margin-top: 50px;
-    height: 500px;
-    border-radius: 30px;
-    border: 2px solid white;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.panelgraficos .grafico1 {
+.left {
+    color: white;
+    text-align: left;
     flex: 1;
-    height: 95%;
-    background-color: rgba(18, 18, 18, 1);
-    border-radius: 30px;
-    border-color: white;
 }
 
-.panelgraficos .grafico2,
-.panelgraficos .grafico3 {
-    flex: 0.5;
-    height: 45%;
-    background-color: rgba(18, 18, 18, 1);
+.left h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.left h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.btnQuantidade input[type="number"] {
+    /* Estilos específicos para o botão de quantidade */
+}
+
+.enderecoentrega input[type="text"] {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    width: 300px;
+    height: 40px;
+}
+
+.enderecoentrega input[type="submit"] {
+    background: #156513;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 300px;
+    height: 40px;
+    border: none;
     border-radius: 30px;
-    border-color: white;
-    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.meiopagamento input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+
+.meiopagamento input[type="checkbox"] + label {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.valorcompra h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.valorcompra h3 {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.right {
+    color: white;
+    text-align: left;
+    flex: 1;
+}
+
+.right h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.right h3 {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.right input[type="text"],
+.right input[type="password"],
+.right input[type="date"] {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 30px;
+    width: 300px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.right input[type="submit"] {
+    background: #156513;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 30px;
+    width: 300px;
+    height: 40px;
+    border: none;
 }
