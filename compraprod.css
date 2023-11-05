@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
     font-family: "DM Sans", sans-serif;
+    box-sizing: border-box;
+    outline: none; 
+    border: none;
+    transition: all .2s linear;
 }
 
 body {
@@ -12,10 +16,13 @@ body {
 .container {
     width: 100%;
     min-height: 100vh;
-    background-color: rgba(18, 18, 18, 1);
+    background: linear-gradient(45deg, #156513, #121212, #121212);
+	background-size: 300% 300%;
+	animation: color 12s ease-in-out infinite;
     padding: 20px 8%;
     box-sizing: border-box;
     position: relative;
+    justify-content: center;
 }
 
 .navbar {
@@ -78,7 +85,12 @@ nav ul li a {
     border-color: transparent;
     font-size: 18px;
     font-weight: 700;
+    cursor: pointer;
     color: white;
+}
+
+#btnSair:hover {
+    background-color: #248C21;
 }
 
 .contaUser {
@@ -102,107 +114,139 @@ nav ul li a {
     margin-left: 10px;
 }
 
-.left {
-    color: white;
-    text-align: left;
-    flex: 1;
-}
 
-.left h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.left h2 {
-    color: white;
-    font-size: 25px;
-    font-weight: 400;
-}
-
-.btnQuantidade input[type="number"] {
-    /* Estilos específicos para o botão de quantidade */
-}
-
-.enderecoentrega input[type="text"] {
-    background: transparent;
+.pag-form {
+    margin-top: 70px;
+    padding: 20px;
+    background: rgba(107, 107, 107, 0.10);
+    border-radius: 20px;
     border: 2px solid white;
-    border-radius: 25px;
-    width: 300px;
-    height: 40px;
+    width: 60%;
+    margin: 70px auto;
 }
 
-.enderecoentrega input[type="submit"] {
-    background: #156513;
+.pag-form .titulopag {
     color: white;
-    font-size: 18px;
-    font-weight: 700;
-    width: 300px;
-    height: 40px;
-    border: none;
-    border-radius: 30px;
-    margin-top: 20px;
-}
-
-.meiopagamento input[type="checkbox"] {
-    width: 30px;
-    height: 30px;
-}
-
-.meiopagamento input[type="checkbox"] + label {
-    color: white;
-    font-size: 18px;
+    font-size: 35px;
     font-weight: 700;
 }
 
-.valorcompra h2 {
+.pag-form .lbtexto {
     color: white;
-    font-weight: 700;
-    font-size: 25px;
+    font-size: 22px;
+    margin-top: 5px
 }
 
-.valorcompra h3 {
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.right {
-    color: white;
+.left-col {
+    margin-right: 50px;
     text-align: left;
-    flex: 1;
 }
 
-.right h2 {
-    color: white;
-    font-size: 25px;
+.right-col {
+    text-align: right;
+    margin-left: 15px;
+  }
+
+.container .pag-form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container .pag-form .row .col{
+    flex: 1 1 250px;
+}
+
+.container .pag-form .row .col .titulo {
+    font-size: 20px;
     font-weight: 700;
-}
-
-.right h3 {
     color: white;
-    font-size: 18px;
-    font-weight: 700;
+    padding-bottom: 5px;
+    text-transform: uppercase;
 }
 
-.right input[type="text"],
-.right input[type="password"],
-.right input[type="date"] {
+.container .pag-form .row .col .inputBox {
+    margin: 15px 0;
+}
+
+.pag-form .inputBox .lbcampo{
+    margin-bottom: 5px;
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.pag-form .inputBox .lbcampo2{
+    margin-bottom: 5px;
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pag-form .inputBox input{
     background: transparent;
-    border: 2px solid white;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.60);
     border-radius: 30px;
-    width: 300px;
-    height: 40px;
-    margin-right: 10px;
+    padding: 10px 15px;
+    font-size: 18px;
+    text-transform: 18px;
+    color: white;
 }
 
-.right input[type="submit"] {
-    background: #156513;
-    color: white;
+ .pag-form .inputBox input:focus {
+    border:2px solid white;
+}
+
+.pag-form .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.pag-form  .inputBox {
+    margin-top: 5px;
+}
+
+.pag-form .inputBox img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px white);
+}
+
+.pag-form .btnFinalizar {
+    width: 50%;
+    padding: 12px;
     font-size: 18px;
     font-weight: 700;
+    color: white;
+    background-color: #156513;
+    margin-top: 5px;
+    border: transparent;
     border-radius: 30px;
-    width: 300px;
-    height: 40px;
-    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
 }
+
+.pag-form .btnFinalizar:hover {
+    background-color: #248C21;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+      padding: 20px 2%;
+    }
+  
+    .pag-form {
+      width: 100%;
+    }
+  
+    .left-col {
+      margin-right: 0; 
+    }
+  }

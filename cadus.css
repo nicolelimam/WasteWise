@@ -12,7 +12,9 @@ body {
 .container {
     width: 100%;
     min-height: 100vh;
-    background-color: rgba(18, 18, 18, 1);
+    background: linear-gradient(45deg, #156513, #121212, #121212);
+	background-size: 300% 300%;
+	animation: color 12s ease-in-out infinite;
     padding: 20px 8%;
     box-sizing: border-box;
 }
@@ -113,7 +115,7 @@ nav ul li a {
     width: 540px;
     height: 30px;
     margin-top: 10px;
-    border: 3px solid white;
+    border: 2px solid white;
     border-radius: 30px;
     background-color: transparent;
     padding: 5px 10px;
@@ -121,6 +123,7 @@ nav ul li a {
     font-size: 18px;
     margin-bottom: 20px;
 }
+
 
 .criar-conta {
     z-index: 1;
@@ -134,7 +137,10 @@ nav ul li a {
     margin-top: 20px;
     margin-left: 290px;
     align-self: flex-end;
+    cursor: pointer;
 }
 
-
+.criar-conta:hover {
+    background-color: #248C21;
+}
 

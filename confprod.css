@@ -94,9 +94,15 @@ nav ul li a {
     width: 150px;
     padding: 10px;
     text-align: center;
+    border: transparent;
     border-radius: 30px;
+    cursor: pointer;
     color: white;
     text-decoration: none;
+}
+
+#btnComprar:hover, #btnInfo:hover {
+    background-color: #248C21;
 }
 
 #btnComprar {

@@ -72,6 +72,7 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     width: 110px;
+    cursor: pointer;
     height: 35px;
     background-color: #156513;
     border-radius: 30px;
@@ -79,6 +80,10 @@ nav ul li a {
     font-size: 18px;
     font-weight: 700;
     color: white;
+}
+
+#btnSair:hover {
+    background-color: #248C21;
 }
 
 .contaUser {

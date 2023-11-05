@@ -119,13 +119,19 @@ nav ul li a {
     border-radius: 30px;
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #btnComprar {
     margin-left: 100px;
     background-color: #156513;
 }
-/* Estilizando a parte direita da página */
+
+#btnComprar:hover {
+    background-color: #248C21;
+}
+
+
 .right {
     display: flex;
     flex-direction: column;

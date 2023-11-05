@@ -18,7 +18,7 @@
                     <li><a href="home.html">Voltar ao início</a></li> <!-- Botão para voltar para a pagina principal sem conta -->
                     <li class="contaUser">
                         <label class="lbuser">Olá, @User</label>
-                        <a href="meuperfil.css" class="btnPerfil" id="btnPerfil">
+                        <a href="meuperfil.html" class="btnPerfil" id="btnPerfil">
                             <div class="iconuser" id="iconuser"></div>
                             <script>
                                 // Script para puxar foto do usuario da pasta local
@@ -34,46 +34,62 @@
                 </ul>
             </nav>
         </div>  
-        <div class="left">
-            <h1>Finalizar pedido</h1>
-            <h2>Lixeira  L0001 1.0 - 10 litros </h2>
-            <div class="btnQuantidade">
-                <input type="number" value="0" min="0" max="100" step="1">            
+        <form action="" class="pag-form">
+            <div class="row">
+                <div class="left-col">
+                    <h2 class="titulopag">Finalizar compra</h2>
+                    <label class="lbtexto">Cadastre seu endereço e cartão de crédito</label>
+                    <div class="inputBox">
+                        <label class="lbcampo">Endereço</label>
+                        <input type="text" name="campoEndereco" placeholder="Ex: Rua Sol Nascente">
+                    </div>
+                    <div class="inputBox">
+                        <label class="lbcampo">Número</label>
+                        <input type="number" name="campoNumero" placeholder="Ex: 123">
+                    </div>
+                    <div class="inputBox">
+                        <label class="lbcampo">Bairro</label>
+                        <input type="text" name="campoBairro" placeholder="Ex: Jardim Paraíso">
+                    </div>
+                    <div class="inputBox">
+                        <label class="lbcampo">Cidade</label>
+                        <input type="text" name="campoCidade" placeholder="Ex: São Paulo">
+                    </div>
+                    <div class="inputBox">
+                        <label class="lbcampo">Estado</label>
+                        <input type="text" name="campoEstado" placeholder="Ex: SP">
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <div class="inputBox">
+                        <label class="lbcampo2">Cartões aceitos</label>
+                        <img src="card_img.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <label class="lbcampo">Nome no cartão</label>
+                        <input type="text" name="campoNomeCartao" placeholder="Ex: Mariana da Silva">
+                    </div>
+                    <div class="inputBox">
+                        <label class="lbcampo">Número do cartão</label>
+                        <input type="number" name="campoBairro" placeholder="Ex: 1111-2222-3333-4444">
+                    </div>
+                    <div class="inputBox">
+                        <label class="lbcampo">Mês de expiração<label>
+                        <input type="number" name="campoMesExp" placeholder="Ex: 01">
+                    </div>
+                    <div class="inputBox">
+                        <label class="lbcampo">Ano de expiração</label>
+                        <input type="number" name="campoAnoExp" placeholder="Ex: 28">
+                    </div>
+                    <div class="inputBox">
+                        <label class="lbcampo">CVV</label>
+                        <input type="text" name="campoCvv" placeholder="Ex: 123">
+                    </div>
+                </div>
             </div>
-            <div class="enderecoentrega">
-                <h2>Endereço de entrega</h2>
-                <input type="text" id="enderecoCompra" placeholder="Endereço">
-                <input type="text" id="cidade" placeholder="Cidade">
-                <input type="text" id="estado" placeholder="Estado">
-                <input type="submit" id="btnSalvar" value="Salvar">
-            </div>
-            <div class="meiopagamento">
-                <input type="checkbox" value="Cartão de crédito" id="cartaocredito">
-                <input type="checkbox" value="Boleto" id="boleto">
-            </div>
-            <div class="valorcompra">
-                <h2>Valor total do pedido</h2>
-                <h3>R$30,00</h3>
-            </div>
-        </div>
-        <div class="right">
-            <div class="infopagamentocartao">
-                <h2>Cadastre seu cartão</h2>
-                <br>
-                <h3>Nome no cartão:</h3>:
-                <input type="text" id="nomeCartao">
-                <h3>Número no cartão:</h3>:
-                <input type="number" id="nomeCartao">
-                <h3>CVV:</h3>:
-                <input type="password" min="3" max="3" id="cvv">
-                <h3>Data de expiração:</h3>:
-                <input type="date" id="dataExpiracao">
-                <h3>Apelido (opcional):</h3>
-                <input type="text" id="apelidoCartao">
-                <input type="submit" id="salvarCartao" value="Salvar cartão">
-            </div>
-                <input type="submit" id="finalizarPedido" value="Finalizar pedido">
-        </div>
+            <input type="submit" value="Confirmar pedido" class="btnFinalizar">
+        </form>
     </div>
 </body>
 </html>
