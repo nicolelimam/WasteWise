@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="home.css"> <!-- Indica o arquivo css que vai ser usado pra customizar essa página  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Faz conexão com o google fonts, que fornece a fonte que está sendo usada  -->
+    <title>Home</title>
+</head>
+  <body>
+    <div class="container">
+        <div class="navbar"> <!-- Criando um conteiner/divisão que engloba tudo o que está na barra de menu  -->
+            <div class="logo"> <!-- Criando um conteiner/divisão para colocar o logotipo do site -->
+                <img src="wwlogo2.png" alt="Logo" class="logo-image">
+            </div>
+            <nav> <!-- Criando uma estrutura de lista/barra de navegação dos itens do menu -->
+                <ul>
+                    <li><a href="minhalixeira.html">Minha lixeira</a></li>
+                    <li><a href="controleprodlixo.html">Controle de produção de lixo</a></li>
+                    <li class="contaUser">
+                        <label class="lbuser">Olá, @User</label>
+                        <a href="meuperfil.html" class="btnPerfil" id="btnPerfil">
+                            <div class="iconuser" id="iconuser"></div>
+                            <script>
+                                // Script para puxar foto do usuario da pasta local
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    var userImageURL = "usuarioex.jpg";
+                                    var iconuser = document.getElementById("iconuser");
+                                    iconuser.style.backgroundImage = `url('${userImageURL}')`;
+                                });
+                            </script>
+                        </a>
+                    </li>
+                    <li><a href="index.html" class="btnSair" id="btnSair">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="panelgraficos">
+            <div class="grafico1">
+
+            </div>
+            <div class="grafico2">
+
+            </div>
+            <div class="grafico3">
+                
+            </div>
+        </div>
+        <button id="btnTema">Ok</button>
+    </div>
+  </body>
+    <script src="mudartema.js"></script>
+</html>
