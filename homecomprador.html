@@ -5,36 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="home.css"> <!-- Indica o arquivo css que vai ser usado pra customizar essa página  -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Faz conexão com o google fonts, que fornece a fonte que está sendo usada  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Home</title>
+
+    </style>
 </head>
   <body>
-    <div class="container">
-        <div class="navbar"> <!-- Criando um conteiner/divisão que engloba tudo o que está na barra de menu  -->
-            <div class="logo"> <!-- Criando um conteiner/divisão para colocar o logotipo do site -->
-                <img src="WasteWise.png" alt="Logo" class="logo-image">
-            </div>
-            <nav> <!-- Criando uma estrutura de lista/barra de navegação dos itens do menu -->
-                <ul>
-                    <li><a href="">Minhas compras</a></li>
-                    <li><a href="vincularlixeira.html">Vincular lixeira</a></li>
-                    <li class="contaUser">
-                        <label class="lbuser">Olá, @User</label>
-                        <a href="meuperfil.html" class="btnPerfil" id="btnPerfil">
-                            <div class="iconuser" id="iconuser"></div>
-                            <script>
-                                // Script para puxar foto do usuario da pasta local
-                                document.addEventListener("DOMContentLoaded", function() {
-                                    var userImageURL = "usuarioex.jpg";
-                                    var iconuser = document.getElementById("iconuser");
-                                    iconuser.style.backgroundImage = `url('${userImageURL}')`;
-                                });
-                            </script>
-                        </a>
-                    </li>
-                    <li><a href="index.html" class="btnSair" id="btnSair">Sair</a></li>
-                </ul>
-            </nav>
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-leaf'></i><span>WasteWise</span></a>
+
+        <ul class="navbar">
+            <li><a href="#">Vincular conta</a></li>
+            <li><a href="confprod.html">Adquirir nova lixeira</a></li>
+        </ul>
+
+        <div class="main">
+            <a href="#" id="usericon"><div class="iconuser"></div><span>Olá, user!</span></a>
+            <button id="btnTheme">Ok</button>
+            <a href="index.html"><i class="ri-logout-circle-r-line" id="btn-logout"></i></a>
+            <i class="ri-menu-line" id="menu-icon"></i>
         </div>
-    </div>
+    </header>
+    <!--Chamando o codigo js-->
+    <script src="mudartema.js"></script>
+    <main>
+
+    </main>
   </body>
+    
 </html>

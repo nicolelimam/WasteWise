@@ -5,49 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="home.css"> <!-- Indica o arquivo css que vai ser usado pra customizar essa página  -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Faz conexão com o google fonts, que fornece a fonte que está sendo usada  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Home</title>
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+        ['Segunda-feira', 3],
+        ['Quarta-feira', 1],
+        ['Quinta-feira', 5],
+        ['Sexta-feira', 1],
+        ['Sábado', 2],
+        ['Domingo', 4]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Quanto lixo você produziu nessa semana (em litros)',
+                    'width':800,
+                    'height':600,
+                    'backgroundColor': { fill:'transparent'},
+                    'colors': ['#628A4C', '#C4E477', '#87B344', '#AFBE6B', '#CFE0BC', '#829A1E', '#E0C7B7', '#1E361E'],
+                    'font-size': 20,
+                    hAxis: {
+                        textStyle:{color: '#FFF'}
+                    },
+                    'is3D':true
+                    };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+
+        }
+        options.titleTextStyle.color = 'white';
+    </script>
+    <style>
+        .chart_type {
+            font-size: 20px;
+            color: white;
+        }
+    </style>
 </head>
   <body>
-    <div class="container">
-        <div class="navbar"> <!-- Criando um conteiner/divisão que engloba tudo o que está na barra de menu  -->
-            <div class="logo"> <!-- Criando um conteiner/divisão para colocar o logotipo do site -->
-                <img src="wwlogo2.png" alt="Logo" class="logo-image">
-            </div>
-            <nav> <!-- Criando uma estrutura de lista/barra de navegação dos itens do menu -->
-                <ul>
-                    <li><a href="minhalixeira.html">Minha lixeira</a></li>
-                    <li><a href="controleprodlixo.html">Controle de produção de lixo</a></li>
-                    <li class="contaUser">
-                        <label class="lbuser">Olá, @User</label>
-                        <a href="meuperfil.html" class="btnPerfil" id="btnPerfil">
-                            <div class="iconuser" id="iconuser"></div>
-                            <script>
-                                // Script para puxar foto do usuario da pasta local
-                                document.addEventListener("DOMContentLoaded", function() {
-                                    var userImageURL = "usuarioex.jpg";
-                                    var iconuser = document.getElementById("iconuser");
-                                    iconuser.style.backgroundImage = `url('${userImageURL}')`;
-                                });
-                            </script>
-                        </a>
-                    </li>
-                    <li><a href="index.html" class="btnSair" id="btnSair">Sair</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="panelgraficos">
-            <div class="grafico1">
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-leaf'></i><span>WasteWise</span></a>
 
-            </div>
-            <div class="grafico2">
+        <ul class="navbar">
+            <li><a href="#">Gerenciar lixeiras</a></li>
+            <li><a href="confprod.html">Adquirir nova lixeira</a></li>
+            <li><a href="#">Relatórios</a></li>
+        </ul>
 
-            </div>
-            <div class="grafico3">
-                
-            </div>
+        <div class="main">
+            <a href="#" id="usericon"><div class="iconuser"></div><span>Olá, user!</span></a>
+            <button id="btnTheme">Ok</button>
+            <a href="index.html"><i class="ri-logout-circle-r-line" id="btn-logout"></i></a>
+            <i class="ri-menu-line" id="menu-icon"></i>
         </div>
-        <button id="btnTema">Ok</button>
-    </div>
-  </body>
+    </header>
+    <!--Chamando o codigo js-->
     <script src="mudartema.js"></script>
+    <main>
+        <div class="graficosPanel">
+                <br>
+                <!--Div that will hold the pie chart-->
+                <div id="chart_div" class="chart-type"></div>
+        </div>
+    </main>
+  </body>
+    
 </html>

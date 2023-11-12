@@ -1,181 +1,238 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,1000;1,9..40,300;1,9..40,500&display=swap');
 
-/* Definindo variáveis que vão armazenar as cores dos componentes da página, elas serão úteis para alterar o tema das páginas
-de claro para escuro */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
 :root {
-    --cor-bg-fundo: linear-gradient(180deg, #F9F9F9 0%, #156513 210%);
+    --cor-bg-fundo: linear(180deg, rgba(21, 101, 19, 0.05) 0%, rgba(255, 255, 255, 0.50) 99.99%); 
+    --cor-navbar: linear(180deg, rgba(21, 101, 19, 0.60) 0%, rgba(255, 255, 255, 0.70) 100%); 
     --cor-fonte: #1E1F22;
-    --cor-btn: #156513;
-    --cor-btn-pointer: #248C21;
-    --cor-btn-click: #0D360C;
+    --cor-btn: #628A4C;
+    --img-bg: url('bg1.jpg');
+    --cor-btn-pointer: #87B344;
+    --cor-btn-click: #77A364;
 }
 
 [data-theme="dark"]{
     --cor-bg-fundo: #2F3136;
     --cor-fonte: #F9F9F9;
+    --cor-navbar: linear(180deg, rgba(35, 35, 35, 0.60) 0%, #156513 100%);
+    --img-bg: url('bg2.jpg');
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "DM Sans", sans-serif;
+.iconuser{
+    background-color: lightgray;
+    border-radius: 50%;
+    width: 2.0rem;
+    height: 2.0rem;
+}
+
+#usericon{
+    display: flex;
+    align-items: center;
+}
+
+#usericon span{
+    display: flex;
+    margin: 0px 10px;
 }
 
 body {
-    background-color: var(--cor-bg-fundo);
-}
-
-.container {
-    width: 100%;
     min-height: 100vh;
-    background: var(--cor-bg-fundo);
-    padding: 20px 8%;
-    box-sizing: border-box;
+    background: var(--img-bg);
+    background-size: cover;
+    color: var(--cor-fonte);
 }
 
-.navbar {
-    height: 12%;
+header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    background: transparent;
+    padding: 1.75rem 12%;
+    transition: all .50s ease;
+    border-bottom: 1px solid var(--cor-fonte);
 }
 
 .logo {
-    width: 200px;
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.logo-image {
-    width: 150px;
-    cursor: pointer;
-}
-
-nav {
-    flex: 1;
-    text-align: right;
-    margin-top: 30px;
-
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--cor-fonte);
-    font-size: 18px;
-    font-weight: 700;
-}
-
-#btnPerfil {
-    margin-left: 10px;
-}
-
-#btnSair {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 110px;
-    height: 35px;
-    background-color: var(--cor-btn);
-    border-radius: 30px;
-    border-color: transparent;
-    font-size: 18px;
-    font-weight: 700;
-    color: white;
-}
-
-#btnSair:hover {
-    background-color: var(--cor-btn-pointer);
-}
-
-.contaUser {
-    margin-top: 5px;
     display: flex;
     align-items: center;
 }
 
-.iconuser {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: lightgray;
-    background-size: cover;
+.logo i{
+    color: var(--cor-btn);
+    font-size: 28px;
+    margin-right: 3px;
 }
 
-.lbuser {
-    font-size: 18px;
+.logo span{
+    font-size: 1.4rem;
     font-weight: 1000;
     color: var(--cor-fonte);
-    margin-left: 10px;
+    margin-right: 3px;
 }
 
-.panelgraficos {
+.navbar {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 95%;
-    margin-top: 50px;
-    height: 500px;
-    border-radius: 30px;
-    border: 2px solid white;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.panelgraficos .grafico1 {
-    flex: 1;
-    height: 95%;
-    background-color: rgba(18, 18, 18, 1);
-    border-radius: 30px;
-    border-color: white;
-}
-
-.panelgraficos .grafico2,
-.panelgraficos .grafico3 {
-    flex: 0.5;
-    height: 45%;
-    background-color: rgba(18, 18, 18, 1);
-    border-radius: 30px;
-    border-color: white;
-    margin-left: 10px;
-}
-
-#btnTema {
-    justify-content: center;
-    text-align: center;
-    margin-top: 80px;
-    width: 200px;
-    height: 40px;
-    font-size: 18px;
-    color: white;
+.navbar a {
+    color: var(--cor-fonte);
+    font-size: 1.1rem;
     font-weight: 700;
-    cursor: pointer;
-    background-color: var(--cor-btn);
-    border: transparent;
-    border-radius: 30px;
+    padding: 5px 0;
+    margin: 0px 25px;
+    transition: all .50s ease;
 
-
-    /* Evento que modifica a cor de fundo do botão quando o usuário passa o 
-    mouse por cima do botão, também adiciona um evento de devanecimento na transição
-    das cores de fundo */
-    &:hover{
-        background-color: var(--cor-btn-pointer);
-        transition: .4s;
+    &:hover {
+        color: var(--cor-btn);
+        transform: translateX(5px);
     }
 }
 
-svg {
-    color: var(--cor-bg-fundo);
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--cor-fonte);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all .50s ease;
+
+    &:hover {
+        color: var(--cor-btn);
+        transform: translateX(5px);
+    }
+}
+
+
+#btnTheme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    border: transparent;
+    background: transparent;
+    color: var(--cor-fonte);
+    font-weight: 700;
+    transition: all .50s ease;
+    
+    &:hover{
+        transform: translateX(5px);
+    }
+}
+
+#btn-logout {
+    font-size: 25px;
+    color: var(--cor-fonte);
+    cursor: pointer;
+    z-index: 1000;
+
+    &:hover{
+        color: var(--cor-btn);
+    }
+}
+
+
+
+#menu-icon {
+    font-size: 30px;
+    color: var(--cor-fonte);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+    &:hover {
+        color: var(--cor-btn);
+    }
+}
+
+@media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+
+}
+
+@media (max-width: 1090px){
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 150%;
+        background: var(--cor-bg-fundo);
+        border: 1px solid var(--cor-fonte);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all .50s ease;
+    }
+
+    .navbar a{
+        display: block;
+        margin: 10px 0;
+        padding: 0px 20px;
+        color: var(--cor-fonte);
+        transition: all .50s ease;
+
+        &:hover {
+            color: var(--cor-btn);
+            transform: translateY(5px);
+        }
+    }
+    .navbar.open {
+        right: 2%;
+    }
+}
+
+.graficosPanel {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    background: transparent;
+    border: 1px var(--cor-fonte);
+    border-radius: 5px;
+}
+
+#chart_div text {
+    fill: var(--cor-fonte);
+    font-size: 20px;
+}
+
+#chart_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60rem;
+    margin-bottom: 20px;
 }
