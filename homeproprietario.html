@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="home.css"> <!-- Indica o arquivo css que vai ser usado pra customizar essa página  -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Faz conexão com o google fonts, que fornece a fonte que está sendo usada  -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Home</title>
 
     <!--Load the AJAX API-->
@@ -49,7 +48,8 @@
                     hAxis: {
                         textStyle:{color: '#FFF'}
                     },
-                    'is3D':true
+                    'is3D':true,
+                    'tooltip': { isHtml: true }
                     };
 
         // Instantiate and draw our chart, passing in some options.
@@ -68,7 +68,7 @@
 </head>
   <body>
     <header>
-        <a href="#" class="logo"><i class='bx bxs-leaf'></i><span>WasteWise</span></a>
+        <a href="#" class="logo"><img src="bin-icon3.png" class="img-logo"/></i><span>WasteWise</span></a>
 
         <ul class="navbar">
             <li><a href="#">Gerenciar lixeiras</a></li>
@@ -87,7 +87,6 @@
     <script src="mudartema.js"></script>
     <main>
         <div class="graficosPanel">
-                <br>
                 <!--Div that will hold the pie chart-->
                 <div id="chart_div" class="chart-type"></div>
         </div>

@@ -20,6 +20,8 @@ function defineCurrentTheme(theme){
         return
     }
     btnDarkMode.innerHTML = lightSvg
+
+    //define a imagem que aparece na tela de cadastro
 }
 
 defineCurrentTheme(themeSystem)

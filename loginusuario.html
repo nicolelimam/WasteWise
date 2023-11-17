@@ -5,46 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="longinus.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Login</title>
+    <script src="configsenha.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Entre em sua conta</title>
 </head>
 <body>
-    <div class="container">
-        <div class="navbar"> <!-- Criando um conteiner/divisão que engloba tudo o que está na barra de navegação -->
-            <div class="logo"> <!-- Criando um conteiner/divisão para colocar o logotipo do site -->
-                <img src="WasteWise.png" alt="Logo" class="logo-image">
+        <header> <!-- Cabeçalho da página/barra de navegação-->
+            <!--Barra de navegação-->
+            <div class="textocontent"> 
+                <br><h1>Entre em sua conta</h1> 
+                <h3>Entre em sua conta e aproveite todos os benefícios que a WasteWise oferece.</h3>
             </div>
-            <nav> <!-- Criando uma estrutura de lista/barra de navegação dos itens da barra -->
-                <ul>
-                    <li><a href="index.html">Voltar ao início</a></li> <!-- Botão para voltar para a pagina principal sem conta -->
-                </ul>
-            </nav>
-        </div>
-    <div class="loginform">
-        <div class="textocontent"> <!-- Só texto da pagina -->
-            <br><h1>Entre em sua conta</h1> 
-            <h3>Entre em sua conta e aproveite todos os benefícios que a WasteWise oferece.</h3>
-        </div>
-        <div class="formulario"> <!-- Formulario de login -->
-            <label class="lbform">E-mail</label><br>
-            <input type="text" name="campoEmail" class="campotxt"><br>
-            <label class="lbform">Senha</label><br>
-            <input type="password" name="campoSenha" class="campotxt"><br>
-            <input type="submit" value="Entrar" class="loginbtn" onclick="redirecionarPag()"><br> <!-- Botão pra confirmar login -->
-            <script>
-                function redirecionarPag() { 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-                    // Função pra redirecionar para a página do usuario logado
-                    window.location.href = "home.html";
-=======
-                    window.location.href = "homeproprietario.html";
->>>>>>> Stashed changes
-=======
-                    window.location.href = "homecomprador.html";
->>>>>>> 7a6a7e8595066436f5eda9aefd070929c52aeffb
-                }
-            </script>
-        </div>
-    </div>
+            <div class="navbar">
+                <button id="btnTheme">Ok</button>
+                <a href="index.html">Voltar ao início</a> <!-- Botão para voltar para a pagina principal sem conta -->
+                
+            </div>
+        </header>
+        <!--Chamando o script que muda o tema da página-->
+        <script src="mudartema.js"></script>
+        <main>
+            <div class="imgpag">
+            </div>
+            <form action="" class="formulariocad">
+                <label class="lbform">Insira seu e-mail</label>
+                <input type="text" name="campoEmail" class="campotxt">
+                <label class="lbform">Insira sua senha</label>
+                <input type="password" name="campoSenha" class="campotxt">
+                <span id="message"></span>
+                <button type="submit" class="entrar-conta" onclick="redirecionarPag()">Entrar</button>
+                <button type="reset" class="cancelar">Cancelar</button>
+                <script>
+                    function redirecionarPag() { 
+                        window.location.href = "homeproprietario.html";
+                    }
+                </script>
+            </form>
+        </main>
 </body>
 </html>

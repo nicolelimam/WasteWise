@@ -1,15 +1,221 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,1000;1,9..40,300;1,9..40,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --cor-bg-fundo: linear(180deg, rgba(21, 101, 19, 0.05) 0%, rgba(255, 255, 255, 0.50) 99.99%); 
+    --cor-fonte: #1E1F22;
+    --cor-btn: #628A4C;
+    --img-bg: url('bg1.jpg');
+    --cor-btn-pointer: #87B344;
+    --cor-btn-click: #77A364;
+}
+
+[data-theme="dark"]{
+    --cor-bg-fundo: #2F3136;
+    --cor-fonte: #F9F9F9;
+    --cor-navbar:#303136;
+    --img-bg: url('bg2.jpg');
 }
 
 body {
-    background-color: rgba(18, 18, 18, 1);
+    min-height: 100vh;
+    background: var(--img-bg);
+    background-size: cover;
+    color: var(--cor-fonte);
 }
 
-.container {
+header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 1.75rem 12%;
+    transition: all .50s ease;
+}
+
+
+.textocontent {
+    display: block;
+    margin-top: 15rem;
+    text-align: left;
+    max-width: 90vh;
+    margin-right: 30px;
+}
+
+.textocontent h1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--cor-fonte);
+}
+
+.textocontent h3 {
+    font-size: 24px;
+    font-weight: 400;
+    width: 80%;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.navbar a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--cor-fonte);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all .50s ease;
+
+    &:hover {
+        color: var(--cor-btn);
+        transform: translateX(5px);
+    }
+}
+
+
+#btnTheme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    border: transparent;
+    background: transparent;
+    color: var(--cor-fonte);
+    font-weight: 700;
+    transition: all .50s ease;
+    
+    &:hover{
+        transform: translateX(5px);
+    }
+}
+
+@media (max-width: 1090px){
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 190%;
+        background: var(--cor-bg-fundo);
+        border: 1px solid var(--cor-fonte);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all .50s ease;
+    }
+
+    .navbar a{
+        display: block;
+        margin: 10px 0;
+        padding: 0px 20px;
+        color: var(--cor-fonte);
+        transition: all .50s ease;
+
+        &:hover {
+            color: var(--cor-btn);
+            transform: translateY(5px);
+        }
+    }
+    .navbar.open {
+        right: 2%;
+    }
+}
+
+form {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+    max-width: 400px;
+    right: 0;
+    flex-direction: column;
+    margin-top: 8rem;
+    margin-right: 8.5rem;
+}
+
+form .lbform {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--cor-fonte);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+form .campotxt {
+    width: 26rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 3px solid var(--cor-fonte);
+    border-radius: 30px;
+    color: var(--cor-fonte);
+    font-size: 18px;
+    padding: 5px 10px 10px 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+form .criar-conta {
+    justify-content: flex-end;
+    width: 10.5rem;
+    font-weight: 700;
+    height: 2.5rem;
+    background: var(--cor-btn);
+    color: white;
+    font-size: 20px;
+    border-radius: 30px;
+    border: transparent;
+    margin-left: 15.45rem;
+    transition: all .50s ease;
+    &:hover {
+        background: var(--cor-btn-pointer);
+        transform: translateX(5px);
+    }
+    &:active {
+        background: var(--cor-btn-click);
+        transform: translateX(5px);
+    }
+}
+
+form .cancelar {
+    margin-left: 18.5rem;
+    font-size: 20px;
+    color: var(--cor-fonte);
+    font-weight: 700;
+    background: transparent;
+    width: 8rem;
+    border: transparent;
+    transition: all .50s ease;
+
+    &:hover {
+        color: var(--cor-btn);
+        transform: translateX(5px);
+    }
+
+}
+/*.container {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(45deg, #156513, #121212, #121212);
@@ -17,9 +223,9 @@ body {
 	animation: color 12s ease-in-out infinite;
     padding: 20px 8%;
     box-sizing: border-box;
-}
+} */
 
-.navbar {
+/*.navbar {
     height: 12%;
     display: flex;
     justify-content: space-between;
@@ -44,7 +250,7 @@ nav {
     text-align: right;
     margin-top: 30px;
 
-}
+} 
 
 nav ul {
     display: flex;
@@ -62,9 +268,30 @@ nav ul li a {
     color: white;
     font-size: 18px;
     font-weight: 700;
+} */
+
+.log-img {
+    display: block;
+    text-align: left;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    max-height: 100vh;
 }
 
-.cadform {
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 60px;
+    flex: 1;
+    text-align: right;
+    background-color: transparent;
+}
+
+
+
+
+/*.cadform {
     flex: 1;
     display: flex;
     justify-content: space-between;
@@ -144,3 +371,4 @@ nav ul li a {
     background-color: #248C21;
 }
 
+*/

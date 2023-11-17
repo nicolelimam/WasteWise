@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,1000;1,9..40,300;1,9..40,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
 
 
 * {
@@ -12,19 +12,21 @@
 
 :root {
     --cor-bg-fundo: linear(180deg, rgba(21, 101, 19, 0.05) 0%, rgba(255, 255, 255, 0.50) 99.99%); 
-    --cor-navbar: linear(180deg, rgba(21, 101, 19, 0.60) 0%, rgba(255, 255, 255, 0.70) 100%); 
+    --cor-navbar: #F1F6F0;
     --cor-fonte: #1E1F22;
     --cor-btn: #628A4C;
     --img-bg: url('bg1.jpg');
     --cor-btn-pointer: #87B344;
     --cor-btn-click: #77A364;
+    --cor-sombra-navbar: rgba(30, 54, 30, 0.15);
 }
 
 [data-theme="dark"]{
     --cor-bg-fundo: #2F3136;
     --cor-fonte: #F9F9F9;
-    --cor-navbar: linear(180deg, rgba(35, 35, 35, 0.60) 0%, #156513 100%);
+    --cor-navbar:#303136;
     --img-bg: url('bg2.jpg');
+    --cor-sombra-navbar: rgba(255, 255, 255, 0.15);
 }
 
 .iconuser{
@@ -32,6 +34,10 @@
     border-radius: 50%;
     width: 2.0rem;
     height: 2.0rem;
+    max-width: 2.0rem;
+    max-height: 2.0rem;
+    min-width: 2.0rem;
+    min-height: 2.0rem;
 }
 
 #usericon{
@@ -54,17 +60,17 @@ body {
 header {
     position: fixed;
     width: 100%;
-    height: 90px;
+    height: 70px;
     top: 0;
     right: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    background: var(--cor-navbar);
     padding: 1.75rem 12%;
     transition: all .50s ease;
-    border-bottom: 1px solid var(--cor-fonte);
+    box-shadow: 0px 3px 30px 3px var(--cor-sombra-navbar) inset;
 }
 
 .logo {
@@ -72,21 +78,34 @@ header {
     align-items: center;
 }
 
+.img-logo {
+    max-width: 30px;
+    max-height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+/*
 .logo i{
     color: var(--cor-btn);
     font-size: 28px;
     margin-right: 3px;
 }
+*/
 
 .logo span{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 1000;
     color: var(--cor-fonte);
-    margin-right: 3px;
+    margin-right: 2px;
+    font-family: 'Agbalumo', serif;
 }
 
 .navbar {
     display: flex;
+    background: transparent;
 }
 
 .navbar a {
@@ -96,6 +115,7 @@ header {
     padding: 5px 0;
     margin: 0px 25px;
     transition: all .50s ease;
+    background: transparent;
 
     &:hover {
         color: var(--cor-btn);
@@ -189,7 +209,7 @@ header {
         top: 100%;
         right: -100%;
         width: 270px;
-        height: 150%;
+        height: 190%;
         background: var(--cor-bg-fundo);
         border: 1px solid var(--cor-fonte);
         display: flex;
@@ -229,10 +249,37 @@ header {
     font-size: 20px;
 }
 
+#chart_div tooltip {
+    background: var(--cor-bg-fundo);
+}
+
 #chart_div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 60rem;
-    margin-bottom: 20px;
+    margin-bottom: 10rem;
+
+}
+
+div.google-visualization-tooltip {
+    width: 150px !important;
+    border: 1px var(--cor-bg-fundo) !important;
+    border-radius: 20px !important;
+    background-color: var(--cor-bg-fundo) !important;
+    position: absolute !important;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75) !important;
+    background: var(--cor-fonte) !important;
+    background: var(--cor-fonte) !important;
+    background: var(--cor-fonte) !important;
+    background: var(--cor-fonte) !important;
+    background: var(--cor-fonte) !important;
+    background: var(--cor-fonte) !important;
+    background: var(--cor-fonte) !important;
+    color: var(--cor-bg-fundo);
+}
+
+div.google-visualization-tooltip > ul > li > span {
+    font-size:  16px !important;
+    font-weight: 500;
+    color: var(--cor-bg-fundo);
 }
