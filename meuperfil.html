@@ -5,50 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="meuperfil.css"> <!-- Indica o arquivo css que vai ser usado pra customizar essa página  -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Faz conexão com o google fonts, que fornece a fonte que está sendo usada  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Meu perfil</title>
 </head>
   <body>
-    <div class="container">
-        <div class="navbar"> <!-- Criando um conteiner/divisão que engloba tudo o que está na barra de navegação -->
-            <div class="logo"> <!-- Criando um conteiner/divisão para colocar o logotipo do site -->
-                <img src="WasteWise.png" alt="Logo" class="logo-image">
-            </div>
-            <nav> <!-- Criando uma estrutura de lista/barra de navegação dos itens da barra -->
-                <ul>
-                    <li><a href="home.html">Voltar ao início</a></li> <!-- Botão para voltar para a pagina principal sem conta -->
-                    <li><a href="index.html" class="btnSair" id="btnSair">Sair</a></li>
-                </ul>
-            </nav>
-        </div>  
+    <header>
+        <a href="#" class="logo"><img src="bin-icon3.png" class="img-logo"/></i><span>WasteWise</span></a>
+
+        <div class="navbar">
+            <button id="btnTheme">Ok</button>
+            <a href="home.html">Voltar ao início</a>
+            <a href="index.html"><i class="ri-logout-circle-r-line" id="btn-logout"></i></a>
+            <i class="ri-menu-line" id="menu-icon"></i>
+        </div>
+    </header>
+
+    <script src="mudartema.js"></script>
+
+    <main>
         <div class="left">
-            <h1>Meu perfil</h1>
-            <br>
-            <div class="fotoperfil" id="fotoperfil">
-                <script>
-                    // Script para puxar foto do usuario da pasta local
-                    document.addEventListener("DOMContentLoaded", function() {
-                        var userImageURL = "usuarioex.jpg";
-                        var fotoperfil = document.getElementById("fotoperfil");
-                        fotoperfil.style.backgroundImage = `url('${userImageURL}')`;
-                    });
-                </script>
+            <h1>MEU PERFIL</h1>
+            <br><br>
+            <div class="ftperfil">
             </div>
-            <br>
+            <br><br>
             <button type="button" id="btnFotoPerfil">Alterar imagem</button>
         </div>
         <div class="right">
-            <h2>Minhas informações</h2>
-            <h3>Nome:</h3>
+            <h2>MINHAS INFORMAÇÕES</h2>
+            <br>
             <label class="lbinfo" id="nomeusuario">Nome do usuário</label>
-            <button type="button" id="btnAlterarNome">Alterar</button>
             <h3>Email:</h3>
             <label class="lbinfo" id="emailusuario">usuario@gmail.com</label>
-            <button type="button" id="btnAlterarEmail">Alterar</button>
     
             <h3>Endereços cadastrados:</h3> 
-            <label class="lbinfo" id="enderecousuario">Endereços cadastrados no bd</label> <button type="button" id="btnAlterarEndereco">Alterar</button>
+            <label class="lbinfo" id="enderecousuario">Endereços cadastrados no bd</label> 
             <br>
+            <button type="button" id="btnEditar">Editar</button>
+
+            <button type="button" id="btnVincularLixeira">Vincular lixeira</button>
         </div>
-    </div>
+    </main>
+
+
 </body>
 </html>

@@ -1,5 +1,222 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,1000;1,9..40,300;1,9..40,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+
 * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --cor-bg-fundo: linear(180deg, rgba(21, 101, 19, 0.05) 0%, rgba(255, 255, 255, 0.50) 99.99%); 
+    --cor-navbar: #F1F6F0;
+    --cor-fonte: #1E1F22;
+    --cor-btn: #628A4C;
+    --img-bg: url('fundo1light.png');
+    --cor-btn-pointer: #87B344;
+    --cor-btn-click: #77A364;
+    --cor-sombra-navbar: rgba(30, 54, 30, 0.15);
+}
+
+[data-theme="dark"]{
+    --cor-bg-fundo: #2F3136;
+    --cor-fonte: #F9F9F9;
+    --cor-navbar:#303136;
+    --img-bg: url('fundo1dark.png');
+    --cor-sombra-navbar: rgba(255, 255, 255, 0.15);
+}
+
+body {
+    min-height: 100vh;
+    background: var(--img-bg);
+    background-size: cover;
+    color: var(--cor-fonte);
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 1.75rem 12%;
+    transition: all .50s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.img-logo {
+    max-width: 30px;
+    max-height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.logo span{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: var(--cor-fonte);
+    margin-right: 2px;
+    font-family: 'Agbalumo', serif;
+}
+
+.navbar {
+    display: flex;
+    background: transparent;
+}
+
+.navbar a {
+    color: var(--cor-fonte);
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 5px 0;
+    margin: 0px 25px;
+    transition: all .50s ease;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    &:hover {
+        color: var(--cor-btn);
+        transform: translateX(5px);
+        border-bottom: 2px solid var(--cor-btn);
+    }
+}
+
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--cor-fonte);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all .50s ease;
+
+    &:hover {
+        color: var(--cor-btn);
+        transform: translateX(5px);
+    }
+}
+
+
+#btnTheme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    border: transparent;
+    background: transparent;
+    color: var(--cor-fonte);
+    font-weight: 700;
+    transition: all .50s ease;
+    
+    &:hover{
+        transform: translateX(5px);
+    }
+}
+
+#menu-icon {
+    font-size: 26px;
+    color: var(--cor-fonte);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+    &:hover {
+        color: var(--cor-btn);
+    }
+}
+
+section {
+    padding: 0 10%;
+}
+
+.propaganda {
+    height: 80%;
+    width: 80%;
+    min-height: 70vh;
+    margin-top: 2rem;
+    background: transparent;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.prop-img {
+    width: 100px;
+    height: auto;
+}
+
+
+.prop-text{
+    width: 100vh;
+}
+
+.prop-text h1 {
+    font-size: 40px;
+    font-weight: 1000;
+    color: var(--cor-fonte);
+}
+
+.prop-text h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-size: 400;
+    color: var(--cor-fonte);
+}
+
+.prop-text p {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--cor-fonte);
+    margin-bottom: 10px;
+}
+
+.prop-text i {
+    font-size: 18px;
+    color: var(--cor-fonte);
+}
+
+.prop-text a {
+    width: 15rem;
+    height: 5rem;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-weight: 700;
+    background: var(--cor-btn);
+    color: white;
+    border: transparent;
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    justify-content: center;
+}
+
+
+/* * {
     margin: 0;
     padding: 0;
     font-family: "DM Sans", sans-serif;
@@ -144,3 +361,4 @@ nav ul li a {
 #btnConferirProduto:hover {
     background-color: #248C21;
 }
+*/

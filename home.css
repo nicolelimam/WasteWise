@@ -11,21 +11,21 @@
 }
 
 :root {
-    --cor-bg-fundo: linear(180deg, rgba(21, 101, 19, 0.05) 0%, rgba(255, 255, 255, 0.50) 99.99%); 
+    --cor-bg-fundo: #E8F0E3; 
     --cor-navbar: #F1F6F0;
-    --cor-fonte: #1E1F22;
+    --cor-fonte: #14150F;
     --cor-btn: #628A4C;
-    --img-bg: url('bg1.jpg');
+    --img-bg: url('fundo1light.png');
     --cor-btn-pointer: #87B344;
     --cor-btn-click: #77A364;
     --cor-sombra-navbar: rgba(30, 54, 30, 0.15);
 }
 
 [data-theme="dark"]{
-    --cor-bg-fundo: #2F3136;
-    --cor-fonte: #F9F9F9;
+    --cor-bg-fundo: #14150F;
+    --cor-fonte: #E8F0E3;
     --cor-navbar:#303136;
-    --img-bg: url('bg2.jpg');
+    --img-bg: url('fundo1dark.png');
     --cor-sombra-navbar: rgba(255, 255, 255, 0.15);
 }
 
@@ -55,6 +55,7 @@ body {
     background: var(--img-bg);
     background-size: cover;
     color: var(--cor-fonte);
+    overflow: hidden;
 }
 
 header {
@@ -67,7 +68,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--cor-navbar);
+    background: transparent;
     padding: 1.75rem 12%;
     transition: all .50s ease;
     box-shadow: 0px 3px 30px 3px var(--cor-sombra-navbar) inset;
@@ -87,13 +88,6 @@ header {
     margin-right: 5px;
 }
 
-/*
-.logo i{
-    color: var(--cor-btn);
-    font-size: 28px;
-    margin-right: 3px;
-}
-*/
 
 .logo span{
     font-size: 1.5rem;
@@ -117,9 +111,18 @@ header {
     transition: all .50s ease;
     background: transparent;
 
-    &:hover {
-        color: var(--cor-btn);
-        transform: translateX(5px);
+}
+
+.navbar a:hover {
+    color: var(--cor-btn);
+    transform: translateX(5px);
+    border-bottom: 2px solid var(--cor-btn);
+}
+
+.navbar a.active {
+    color: var(--cor-btn);
+    &:hover{
+        border-bottom: none;
     }
 }
 
@@ -234,6 +237,23 @@ header {
         right: 2%;
     }
 }
+
+main {
+    padding: 0 10%;
+    width: 100%;
+    height: 100%;
+    max-width: 120vh;
+}
+
+main .minhaslixeiras h1 {
+    font-size: 30px;
+    color: var(--cor-fonte);
+    font-weight: 1000;
+    margin-top: 6rem;
+    margin-left: 2rem;
+}
+
+
 
 .graficosPanel {
     display: flex;

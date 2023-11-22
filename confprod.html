@@ -3,33 +3,131 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="confprod.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="confprod.css"> <!-- Indica o arquivo css que vai ser usado pra customizar essa página  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Faz conexão com o google fonts, que fornece a fonte que está sendo usada  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Conferir produtos</title>
 </head>
-<body>
-    <div class="container">
-        <div class="navbar"> <!-- Criando um conteiner/divisão que engloba tudo o que está na barra de navegação -->
-            <div class="logo"> <!-- Criando um conteiner/divisão para colocar o logotipo do site -->
-                <img src="WasteWise.png" alt="Logo" class="logo-image">
+  <body>
+    <header>
+        <a href="#" class="logo"><img src="bin-icon3.png" class="img-logo"/></i><span>WasteWise</span></a>
+
+        <div class="navbar">
+            <button id="btnTheme">Ok</button>
+            <a href="home.html">Voltar ao início</a>
+            <a href="index.html"><i class="ri-logout-circle-r-line" id="btn-logout"></i></a>
+        </div>
+    </header>
+
+    <script src="mudartema.js"></script>
+
+    <main>
+        <div class="search-box">
+            <input type="text" class="search-txt" id="campoPesquisa" placeholder="Pesquise o produto aqui">
+            <a href="#" class="search-btn" id="btnPesquisar"><i class='bx bx-search'></i></a>
+        </div>
+        <br><br>
+        <div class="products">
+            <div class="card">
+                <div class="img-product">
+                    <img src="lixeira-preta-1.png" alt="">
+                </div>
+                <div class="info-product">
+                    <h4>Lixeira Inteligente - Modelo 001</h4>
+                    <h5>R$55,00</h5>
+                </div>
+                <div class="btnCard">
+                    <button type="button" id="btnPopup1">Ver informações</button>
+                </div>
             </div>
-            <nav> <!-- Criando uma estrutura de lista/barra de navegação dos itens da barra -->
-                <ul>
-                    <li><a href="index.html">Voltar ao início</a></li> <!-- Botão para voltar para a pagina principal sem conta -->
-                </ul>
-            </nav>
-        </div>
-        <div class="titulopag">
-            <h1>Nossos produtos</h1>
-        </div>
-        <div class="produto">
-            <h2>Modelo: L0001 1.0</h2>
-            <div class="imgProduto">
-                <img src="lixeiraprod.png">
+            <div class="card">
+                <div class="img-product">
+                    <img src="lixeira-branca.png" alt="">
+                </div>
+                <div class="info-product">
+                    <h4>Lixeira Inteligente - Modelo 002</h4>
+                    <h5>R$50,00</h5>
+                </div>
+                <div class="btnCard">
+                    <button type="button" id="btnPopup2">Ver informações</button>
+                </div>
             </div>
-            <a href="loginusuario.html" id="btnComprar">Comprar</a>
-            <a href="infoprod.html" id="btnInfo">Informações</a>
+            <div class="card">
+                <div class="img-product">
+                    <img src="lixeira-preta-1.png" alt="">
+                </div>
+                <div class="info-product">
+                    <h4>Lixeira Inteligente - Modelo 003</h4>
+                    <h5>R60,00</h5>
+                </div>
+                <div class="btnCard">
+                    <button type="button" id="btnPopup3">Ver informações</button>
+                </div>
+            </div>
         </div>
-    </div>
+       <!-- <div class="prod-popup" id="popup-1">
+            <span class="close">&times;</span>
+            <h3>Modelo 001</h3>
+            <h5>Lixeira Inteligente - 5 Litros | Cor: Preta</h5>
+            <h4>R$55,00</h4>
+            <button type="button" id="btnCart">Adicionar ao carrinho</button>
+            <button type="button" id="btnComprar">Comprar</button>
+        </div>
+        <script>
+            var pp1 = document.getElementById("popup-1");
+            var pp2 = document.getElementById("popup-2");
+            var pp2 = document.getElementById("popup-3");
+            var btn1 = document.getElementById("btnPopup1");
+            var btn2 = document.getElementById("btnPopup2");
+            var btn3 = document.getElementById("btnPopup3");
+
+            var span = document.getElementsByClassName("close")[0];
+
+            function openPopup1(){
+                btn1.onclick = function(){
+                    pp1.style.display = "block";
+                }
+            }
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+        </script> -->
+ <!--
+        <div class="products-popup">
+            <div class="prod-popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopup()">&times;
+                    </div>
+                    <img src="lixeira-preta-1.png" alt="">
+                    <h4>Lixeira Inteligente - Modelo 001 - 5 Litros</h4>
+                    <h5>Cor: Preta</h5>
+                    <h3>R$55,00</h3>
+                    <a href="#" class="btn-popup">Adicionar ao carrinho</a><br>
+                    <a href="#" class="btn-popup">Comprar</a>
+                </div>
+                <script>
+                    function togglePopup(){
+                        document.getElementById("popup-1").classList.toggle("active");
+                    }
+                </script>
+            </div>
+        </div>
+    -->
+    </main>
+
 </body>
 </html>
