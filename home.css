@@ -126,7 +126,6 @@ header {
     }
 }
 
-
 .main {
     display: flex;
     align-items: center;
@@ -145,7 +144,6 @@ header {
         transform: translateX(5px);
     }
 }
-
 
 #btnTheme {
     display: flex;
@@ -231,75 +229,75 @@ header {
         &:hover {
             color: var(--cor-btn);
             transform: translateY(5px);
+            border-bottom: 0 transparent;
         }
     }
     .navbar.open {
         right: 2%;
     }
+
+    .logo span {
+        font-size: 16px;
+    }
 }
 
 main {
-    padding: 0 10%;
     width: 100%;
-    height: 100%;
-    max-width: 120vh;
-}
-
-main .minhaslixeiras h1 {
-    font-size: 30px;
-    color: var(--cor-fonte);
-    font-weight: 1000;
-    margin-top: 6rem;
-    margin-left: 2rem;
-}
-
-
-
-.graficosPanel {
-    display: flex;
-    justify-content: center;
-    margin-top: 10rem;
+    min-height: 90vh;
+    margin-top: 4rem;
     background: transparent;
-    border: 1px var(--cor-fonte);
-    border-radius: 5px;
 }
 
-#chart_div text {
-    fill: var(--cor-fonte);
-    font-size: 20px;
+main .titulopag {
+    margin-top: 5rem;
+    padding: 20px 11%;
+    
 }
 
-#chart_div tooltip {
-    background: var(--cor-bg-fundo);
+.titulopag h2 {
+    font-size: 30px;
+    font-weight: 1000;
+    color: var(--cor-fonte);
+    text-align: left;
 }
 
-#chart_div {
+.panel-lixeiras {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 10rem;
-
+    margin-top: 1rem; /* Adiciona margem superior para separar a divs */
+    width: 80%;
+    height: auto;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px var(--cor-fonte);
+    border-radius: 20px;
+    border: 2px solid var(--cor-fonte) 20%;
+    padding: 20px 12%;
+    margin-left: auto; /* Coloca a div no canto direito */
+    margin-right: auto; /* Coloca a div no canto direito */
 }
 
-div.google-visualization-tooltip {
-    width: 150px !important;
-    border: 1px var(--cor-bg-fundo) !important;
-    border-radius: 20px !important;
-    background-color: var(--cor-bg-fundo) !important;
-    position: absolute !important;
-    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75) !important;
-    background: var(--cor-fonte) !important;
-    background: var(--cor-fonte) !important;
-    background: var(--cor-fonte) !important;
-    background: var(--cor-fonte) !important;
-    background: var(--cor-fonte) !important;
-    background: var(--cor-fonte) !important;
-    background: var(--cor-fonte) !important;
-    color: var(--cor-bg-fundo);
+.panel-compras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem; 
+    width: 80%;
+    height: auto;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px var(--cor-fonte);
+    border-radius: 20px;
+    border: 2px solid var(--cor-fonte) 20%;
+    padding: 20px 12%;
+    margin-left: auto; /* Coloca a div no canto direito */
+    margin-right: auto; /* Coloca a div no canto direito */
 }
 
-div.google-visualization-tooltip > ul > li > span {
-    font-size:  16px !important;
-    font-weight: 500;
-    color: var(--cor-bg-fundo);
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 10px;
+        overflow: auto;
+    }
 }

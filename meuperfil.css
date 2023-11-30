@@ -33,6 +33,7 @@ body {
     background: var(--img-bg);
     background-size: cover;
     color: var(--cor-fonte);
+    overflow: hidden;
 }
 
 header {
@@ -132,6 +133,7 @@ header {
     border-radius: 50%;
     border: transparent;
     background-color: lightgrey;
+    box-shadow: 0 0 5px var(--cor-fonte);
 }
 
 main {
@@ -268,7 +270,29 @@ main {
     }
 }
 
-
+@media screen and (max-width: 768px) {
+    body{
+        overflow: auto;
+        padding-top: 70px;
+    }
+    main {
+      flex-direction: column; 
+    }
+  
+    .left,
+    .right {
+      width: 100%; 
+      max-width: none;
+      margin-top: 0;
+      padding: 0 5%;
+      margin-bottom: 30px;
+    }
+    
+    .right {
+      margin-top: 1rem; 
+    }
+  }
+  
 
 
 

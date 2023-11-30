@@ -226,7 +226,7 @@ main {
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 1.1rem;
 
 }
 
@@ -246,5 +246,12 @@ main {
     margin-right: 22.8rem;
     &:hover{
         color: var(--cor-btn-pointer);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 70px;
+        overflow: auto;
     }
 }
