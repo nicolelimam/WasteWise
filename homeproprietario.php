@@ -17,7 +17,6 @@
         <a href="#" class="logo"><img src="bin-icon3.png" class="img-logo"/></i><span>WasteWise</span></a>
 
         <ul class="navbar">
-            <li><a href="#" class="active">Home</a></li>
             <li><a href="relatorios.php">Relatórios</a></li>
             <li><a href="confprod.php">Adquirir nova lixeira</a></li>
         </ul>

@@ -34,7 +34,10 @@
           <h2>MINHAS COMPRAS<h2>
         </div>
       <div class="panel-compras">
-
+        <div class="mensagem">
+          <h3>Ops! Parece que você não possui nenhuma lixeira...</h3>
+          <h4>Acesse a nossa loja e compre sua própria lixeira inteligente! Para isso <a href="confprod.php">clique aqui.</a></h4>
+        </div>
       </div>
 
     </main>

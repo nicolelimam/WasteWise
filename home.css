@@ -15,7 +15,7 @@
     --cor-navbar: #F1F6F0;
     --cor-fonte: #14150F;
     --cor-btn: #628A4C;
-    --img-bg: url('fundo1light.png');
+    --img-bg: url('fundo1light.jpg');
     --cor-btn-pointer: #87B344;
     --cor-btn-click: #77A364;
     --cor-sombra-navbar: rgba(30, 54, 30, 0.15);
@@ -25,7 +25,7 @@
     --cor-bg-fundo: #14150F;
     --cor-fonte: #E8F0E3;
     --cor-navbar:#303136;
-    --img-bg: url('fundo1dark.png');
+    --img-bg: url('fundo1dark.jpg');
     --cor-sombra-navbar: rgba(255, 255, 255, 0.15);
 }
 
@@ -293,6 +293,37 @@ main .titulopag {
     padding: 20px 12%;
     margin-left: auto; /* Coloca a div no canto direito */
     margin-right: auto; /* Coloca a div no canto direito */
+}
+
+.mensagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 5%;
+}
+
+.mensagem h3 {
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--cor-fonte);
+    text-align: center;
+}
+
+.mensagem h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cor-fonte);
+}
+
+.mensagem a {
+    color: var(--cor-btn);
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 @media screen and (max-width: 768px) {

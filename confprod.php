@@ -14,6 +14,7 @@
         <a href="#" class="logo"><img src="bin-icon3.png" class="img-logo"/></i><span>WasteWise</span></a>
 
         <div class="navbar">
+            <a href="meuperfil.php" id="usericon"><div class="iconuser"></div></a>
             <button id="btnTheme">Ok</button>
             <a href="#" onclick="voltarPagina()">Voltar</a>
             <a href="index.php"><i class="ri-logout-circle-r-line" id="btn-logout"></i></a>

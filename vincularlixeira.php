@@ -42,25 +42,6 @@
             </div>
         </form>
     </main>
-    <!--
-    <section class="content">
-        <div class="text-content">
-            <h1>VINCULAR NOVA LIXEIRA À CONTA</h1>
-            <h3>Você pode vincular quantos produtos quiser à sua conta e aproveitar todos os benefícios que a WasteWise oferece!</h3>
-        </div>
-        <br>
-        <div class="formulario">
-            <form action="">
-                <h4>CÓDIGO SERIAL</h4>
-                <h5>Insira abaixo o código serial da sua lixeira</h5>
-                <input type="text" id="campoCodSerial">
-                <br>
-                <input type="submit" id="btnVincular" value="Vincular">
-                <br>
-                <input type="reset" id="btnCancelar" value="Cancelar">
-            </form>
-        </div>
-    </section>
-    -->
+    
 </body>
 </html>

@@ -258,6 +258,7 @@ main .titulopag {
     font-weight: 1000;
     color: var(--cor-fonte);
     text-align: left;
+    padding: 0 5%;
 }
 
 .graficos {
