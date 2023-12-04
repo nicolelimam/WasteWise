@@ -12,7 +12,7 @@
 </head>
 <body>
         <header> <!-- Cabeçalho da página/barra de navegação-->
-            <a href="#" class="logo"><img src="bin-icon3.png" class="img-logo"/></i><span>WasteWise</span></a>
+            <a href="index.php" class="logo"><img src="bin-icon3.png" class="img-logo"/></i><span>WasteWise</span></a>
             <div class="navbar">
                 <button id="btnTheme">Ok</button>
                 <a href="#" onclick="voltarPagina()">Voltar</a>
@@ -25,7 +25,7 @@
         </script>
         <script src="mudartema.js"></script>
         <main>
-            <form class="form-login">
+            <form method="post" class="form-login" action="">
                 <h1>ENTRE EM SUA CONTA</h1>
                 <div class="input-box">
                     <label class="lbform">Insira seu e-mail</label><br>
@@ -37,14 +37,8 @@
                     <span id="message"></span>
                 </div>
                 <div class="btn-form">
-                    <button type="submit" class="entrar-conta" id="btnEntrar" onclick="redirecionarPag()">Entrar</button><br>
+                    <button type="submit" class="entrar-conta" id="btnEntrar" name="btnEntrar">Entrar</button><br>
                     <button type="reset" class="cancelar" id="btnCancelar">Cancelar</button>
-
-                    <script>
-                        function redirecionarPag() { 
-                            window.location.href = "homeproprietario.php";
-                        }
-                    </script>
                 </div>
                 <div class="alt">
                     <h4>Ainda não tem uma conta?<a href="cadastrarusuario.php">Cadastre-se</a></h4>
@@ -54,3 +48,47 @@
         </main>
 </body>
 </html>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['btnEntrar'])) {
+        
+        $email = $_POST['campoEmail'];
+        $senha_digitada = $_POST['campoSenha'];
+
+
+            $conn = new mysqli("localhost", "root", "", "WastWise");
+
+            $sql_select = "SELECT * FROM Cliente WHERE emailCliente='$email'";
+            $result = $conn->query($sql_select);
+
+            if ($result->num_rows > 0) {
+
+                while($row = $result->fetch_assoc()) {
+                    session_start();
+                    $_SESSION['idc'] = $row["idCliente"];
+                    $_SESSION['nomec'] = $row["nomeCliente"];
+                    $_SESSION['emailc'] = $row["emailCliente"];
+                    $_SESSION['senhac'] = $row["senhaCliente"];
+                    $_SESSION['perfilc'] = $row["perfilCliente"];
+
+                    if (password_verify($senha_digitada, $_SESSION['senhac'])) {
+                        if($_SESSION['perfilc'] == 1){
+                            header('Location: homecomprador.php');
+                        }else{
+                            header('Location: homeproprietario.php');
+                        }
+                    } else {
+                        
+                    }
+
+                }
+            } 
+        } else {
+            echo "As senhas não coincidem. Por favor, tente novamente.";
+        }
+    } else {
+        echo "Certifique-se de preencher ambos os campos de senha.";
+    }
+
+?>

@@ -94,7 +94,9 @@ header {
 }
 
 .iconuser{
-    background-color: lightgray;
+    background-image: url('iconuser.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 50%;
     width: 2.0rem;
     height: 2.0rem;
@@ -158,90 +160,22 @@ main {
     justify-content: center;
 }
 
-.search-box {
-    width: 100%;
-    max-width: 500px;
-    height: 45px;
+main h1 {
+    font-size: 45px;
+    color: var(--cor-fonte);
+    font-weight: 1000;
     text-align: center;
-    background: var(--cor-bg-fundo);
-    border: 2px solid var(--cor-fonte);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    border-radius: 30px;
-    margin-top: 2rem; 
-
-    align-self: center;
-    display: flex;
-}
-
-.search-txt {
-    width: 97%;
-    height: 30px;
-    padding: 5px 2%;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-right: 5px;
-    font-size: 18px;
-    align-items: center;
-    color: var(--cor-fonte);
-    border: 0px;
-    outline: 0px;
-    background:transparent;
+    margin-top: 4rem;
 }
 
 
-.search-btn {
-    width: 35px;
-    height: 35px;
-    background: transparent;
-    color: var(--cor-fonte);
-    font-size: 25px;
-    align-self: center;
-    margin-left: 1rem;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    transition: all 0.4s ease;
-}
-
-
-.bx-search {
-    font-size: 30px;
-    width: 30px;
-    height: 100%;
-    margin-bottom: 1px;
-    margin-top: 3px;
-    background: transparent;
-    transition: all 0.4s ease;
-
-    &:hover {
-        transform: translateX(3px);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    header {
-      padding: 1.75rem 5%; 
-    }
-  
-    .search-box {
-      max-width: 80%; 
-      margin-top: 5rem; 
-    }
-  
-    .search-txt {
-      width: 70%; 
-    }
-  
-    .search-txt {
-        width: 97%;
-        font-size: 16px;
+@media screen and (min-width: 1399px) {
+    main h1 {
+        font-size: 55px;
+        margin-top: 5rem;
     }
 
-    .navbar a {
-        font-size: 16px;
-    }
-  }
+} 
 
 .products {
     display: flex;
@@ -253,6 +187,7 @@ main {
     padding-top: 15px;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 .products .card {
@@ -344,6 +279,7 @@ main {
     color: var(--cor-fonte);
     transform: rotate(45deg);
     cursor: pointer;
+    transition: all .50s ease;
     &:hover{
         color: var(--cor-btn);
     }
@@ -357,6 +293,7 @@ main {
     color: var(--cor-fonte);
     transform: rotate(45deg);
     cursor: pointer;
+    transition: all .50s ease;
     &:hover{
         color: var(--cor-btn);
     }
@@ -370,6 +307,7 @@ main {
     color: var(--cor-fonte);
     transform: rotate(45deg);
     cursor: pointer;
+    transition: all .50s ease;
     &:hover{
         color: var(--cor-btn);
     }

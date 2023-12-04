@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --cor-bg-fundo: #E8F0E3; 
+    --cor-navbar: #F1F6F0;
+    --cor-fonte: #14150F;
+    --cor-btn: #628A4C;
+    --img-bg: url('fundo1light.jpg');
+    --cor-btn-pointer: #87B344;
+    --cor-btn-click: #77A364;
+    --cor-sombra-navbar: rgba(30, 54, 30, 0.15);
+}
+
+[data-theme="dark"]{
+    --cor-bg-fundo: #14150F;
+    --cor-fonte: #E8F0E3;
+    --cor-navbar:#303136;
+    --img-bg: url('fundo1dark.jpg');
+    --cor-sombra-navbar: rgba(255, 255, 255, 0.15);
+}
+
+.iconuser{
+    background-image: url('iconuser.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 2.0rem;
+    height: 2.0rem;
+    max-width: 2.0rem;
+    max-height: 2.0rem;
+    min-width: 2.0rem;
+    min-height: 2.0rem;
+    padding: 0 5%;
+}
+
+#usericon{
+    display: flex;
+    align-items: center;
+}
+
+#usericon span{
+    display: flex;
+    margin: 0px 10px;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--img-bg);
+    background-size: cover;
+    color: var(--cor-fonte);
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 1.75rem 12%;
+    transition: all .50s ease;
+    box-shadow: 0px 3px 30px 3px var(--cor-sombra-navbar) inset;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.img-logo {
+    max-width: 30px;
+    max-height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+
+.logo span{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: var(--cor-fonte);
+    margin-right: 2px;
+    font-family: 'Agbalumo', serif;
+}
+
+.navbar {
+    display: flex;
+    background: transparent;
+}
+
+.navbar a {
+    color: var(--cor-fonte);
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 5px 0;
+    margin: 0px 25px;
+    transition: all .50s ease;
+    background: transparent;
+
+}
+
+.navbar a:hover {
+    color: var(--cor-btn);
+    transform: translateX(5px);
+    border-bottom: 2px solid var(--cor-btn);
+}
+
+.navbar a.active {
+    color: var(--cor-btn);
+    &:hover{
+        border-bottom: none;
+    }
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--cor-fonte);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all .50s ease;
+
+    &:hover {
+        color: var(--cor-btn);
+        transform: translateX(5px);
+    }
+}
+
+#btnTheme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    border: transparent;
+    background: transparent;
+    color: var(--cor-fonte);
+    font-weight: 700;
+    transition: all .50s ease;
+    
+    &:hover{
+        transform: translateX(5px);
+    }
+}
+
+#btn-logout {
+    font-size: 25px;
+    color: var(--cor-fonte);
+    cursor: pointer;
+    z-index: 1000;
+
+    &:hover{
+        color: var(--cor-btn);
+    }
+}
+
+
+
+#menu-icon {
+    font-size: 30px;
+    color: var(--cor-fonte);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+    &:hover {
+        color: var(--cor-btn);
+    }
+}
+
+@media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+
+}
+
+@media (max-width: 1090px){
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 190%;
+        background: var(--cor-bg-fundo);
+        border: 1px solid var(--cor-fonte);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all .50s ease;
+    }
+
+    .navbar a{
+        display: block;
+        margin: 10px 0;
+        padding: 0px 20px;
+        color: var(--cor-fonte);
+        transition: all .50s ease;
+
+        &:hover {
+            color: var(--cor-btn);
+            transform: translateY(5px);
+            border-bottom: 0 transparent;
+        }
+    }
+    .navbar.open {
+        right: 2%;
+    }
+
+    .logo span {
+        font-size: 16px;
+    }
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 0 10%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align: center;
+    background: transparent;
+    margin-top: 1rem;
+}
+
+.panel-compras {
+    width: 900px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px var(--cor-fonte);
+    border-radius: 20px;
+    border: 2px solid var(--cor-fonte) 20%;
+    align-self: center;
+    text-align: center;
+}
+
+.panel-compras h2 {
+    font-size: 30px;
+    font-weight: 1000;
+    color: var(--cor-fonte);
+
+    padding: 20px 1%;
+}
+
+#tabelaCompras{
+    width: 720px;
+    height: 380px;
+    background: transparent;
+    border: 2px solid var(--cor-fonte);
+    border-radius: 30px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#tabelaCompras thead {
+    height: 25px;
+}
+
+#tabelaCompras th {
+    border-bottom: 2px solid var(--cor-fonte);
+}
+
+#tabelaCompras th .th1 {
+    border-right: 2px solid var(--cor-fonte);
+    border-bottom: 2px solid var(--cor-fonte);
+}
+
+#tabelaCompras td {
+    font-size: 13px;
+    border-bottom: 1px solid #C5C8B7;  
+    padding: 5px; /* Espaçamento interno das células */
+    text-align: left; /* Alinhamento do texto nas células */
+}
+
+#btnVinc {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cor-fonte);
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all .50s ease;
+
+    &:hover {
+        color: var(--cor-btn);
+        transform: translateY(3px);
+    }
+}

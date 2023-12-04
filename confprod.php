@@ -28,10 +28,7 @@
     <script src="mudartema.js"></script>
     <script src="popup.js"></script>
     <main>
-        <div class="search-box">
-            <input type="text" class="search-txt" id="campoPesquisa" placeholder="Pesquise o produto aqui">
-            <a href="#" class="search-btn" id="btnPesquisar"><i class='bx bx-search'></i></a>
-        </div>
+    <h1>PRODUTOS DISPONÍVEIS</h1>
         <br><br>
         <div class="products">
             <div class="card">
@@ -39,7 +36,7 @@
                     <img src="lixeira-preta-1.png" alt="">
                 </div>
                 <div class="info-product">
-                    <h4>Lixeira Inteligente - Modelo 001</h4>
+                    <h4>Lixeira Inteligente - Rattan</h4>
                     <h5>R$55,00</h5>
                 </div>
                 <div class="btnCard">
@@ -51,7 +48,7 @@
                     <img src="lixeira-branca.png" alt="">
                 </div>
                 <div class="info-product">
-                    <h4>Lixeira Inteligente - Modelo 002</h4>
+                    <h4>Lixeira Inteligente - Primafer</h4>
                     <h5>R$50,00</h5>
                 </div>
                 <div class="btnCard">
@@ -63,7 +60,7 @@
                     <img src="lixeira-preta-1.png" alt="">
                 </div>
                 <div class="info-product">
-                    <h4>Lixeira Inteligente - Modelo 003</h4>
+                    <h4>Lixeira Inteligente - Plastutti</h4>
                     <h5>R60,00</h5>
                 </div>
                 <div class="btnCard">
@@ -80,7 +77,7 @@
                 <img src="lixeira-preta-1.png" alt="">
             </div>
             <div class="info-popup1">
-                <h2>Lixeira Inteligente - Modelo 001</h2>
+                <h2>Lixeira Inteligente - Rattan</h2>
                 <h3>Capacidade: 5 litros | Cor: Preta</h3>
                 <h1>R$55,00</h1>
             </div>
@@ -101,7 +98,7 @@
                 <img src="lixeira-branca.png"">
             </div>
             <div class="info-popup2">
-                <h2>Lixeira Inteligente - Modelo 002</h2>
+                <h2>Lixeira Inteligente - Primafer</h2>
                 <h3>Capacidade: 5 litros | Cor: Branca</h3>
                 <h1>R$50,00</h1>
             </div>
@@ -117,8 +114,8 @@
                 <img src="lixeira-preta-1.png"">
             </div>
             <div class="info-popup3">
-                <h2>Lixeira Inteligente - Modelo 003</h2>
-                <h3>Capacidade: 7 litros | Cor: Preto</h3>
+                <h2>Lixeira Inteligente - Plastutti</h2>
+                <h3>Capacidade: 5 litros | Cor: Preto</h3>
                 <h1>R$50,00</h1>
             </div>
             <div class="btn-comprar">

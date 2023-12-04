@@ -125,21 +125,13 @@ header {
     }
 }
 
-.ftperfil {
-    min-width: 200px;
-    min-height: 200px;
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 50%;
-    border: transparent;
-    background-color: lightgrey;
-    box-shadow: 0 0 5px var(--cor-fonte);
-}
+
 
 main {
     display: flex;
     width: 100%;
     background: transparent;
+    flex-direction: column;
     position: relative;
     padding: 0 10%;
     height: 100%;
@@ -165,23 +157,6 @@ main {
     width: 100%;
 }
 
-#btnFotoPerfil {
-    width: 170px;
-    height: 40px;
-    background: var(--cor-btn);
-    border-radius: 30px;
-    border: transparent;
-    cursor: pointer;
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
-    transition: all .50s ease;
-
-    &:hover {
-        background: var(--cor-btn-pointer);
-        transform: translateY(3px);
-    }
-}
 
 .right {
     justify-content: flex-end;
@@ -191,8 +166,8 @@ main {
     width: 100%;
     max-width: 120vh;
     height: 100%;
-    margin-top: 12rem;
-    padding: 0 10%;
+    margin-top: 1rem;
+    padding: 0 2%;
 }
 
 .right h2 {
@@ -243,14 +218,15 @@ main {
     height: 35px;
     background: transparent;
     font-size: 18px;
+    text-align: left;
     font-weight: 700;
     color: var(--cor-fonte);
     border-radius: 30px;
     border: transparent;
     transition: all .50s ease;
     cursor: pointer;
-    margin-left: 17rem;
-    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-top: 4rem;
 
 
     &:hover {
@@ -293,6 +269,103 @@ main {
     }
   }
   
+.bg-popup {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
 
+.content-popup {
+    height: 400px;
+    width: 500px;
+    background-color: var(--cor-bg-fundo);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 20px;
+    flex-direction: column;
+}
 
+.close-pp {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 45px;
+    color: var(--cor-fonte);
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: all .50s ease;
+    &:hover{
+        color: var(--cor-btn);
+    }
+}
 
+.content-popup h4 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cor-fonte);
+}
+
+.lbpopup {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cor-fonte);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.campo-popoup {
+    width: 300px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cor-fonte);
+    background: transparent;
+    border: 2px solid var(--cor-fonte);
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 0 2%;
+}
+
+#btnConfirmar {
+    width: 120px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    border: 2px solid var(--cor-btn);
+    border-radius: 30px;
+    background: var(--cor-btn);
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    transition: all .50s ease;
+
+    &:hover{
+        background: var(--cor-btn-pointer);
+        transform: translateY(3px);
+    }
+}
+
+#btnCancelar {
+    background: transparent;
+    border: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cor-fonte);
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all .50s ease;
+
+    &:hover{
+        color: var(--cor-btn);
+        transform: translateY(3px);
+    }
+}

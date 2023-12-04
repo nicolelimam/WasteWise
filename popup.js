@@ -27,3 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector('.bg-popup3').style.display = "none";
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('btnEditar').addEventListener("click", function() {
+        document.querySelector('.bg-popup').style.display = "flex";
+    });
+
+    document.querySelector('.close-pp').addEventListener("click", function() {
+        document.querySelector('.bg-popup').style.display = "none";
+    });
+});

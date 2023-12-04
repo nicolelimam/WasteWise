@@ -93,7 +93,9 @@ header {
 }
 
 .iconuser{
-    background-color: lightgray;
+    background-image: url('iconuser.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 50%;
     width: 2.0rem;
     height: 2.0rem;
@@ -103,6 +105,7 @@ header {
     min-height: 2.0rem;
     padding: 0 5%;
 }
+
 
 #usericon{
     display: flex;

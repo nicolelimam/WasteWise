@@ -19,6 +19,7 @@
     --cor-btn-pointer: #87B344;
     --cor-btn-click: #77A364;
     --cor-sombra-navbar: rgba(30, 54, 30, 0.15);
+    --cor-fonte-grafico: var(--cor-fonte);
 }
 
 [data-theme="dark"]{
@@ -27,10 +28,13 @@
     --cor-navbar:#303136;
     --img-bg: url('fundo1dark.png');
     --cor-sombra-navbar: rgba(255, 255, 255, 0.15);
+    --cor-fonte-grafico: var(--cor-fonte);
 }
 
 .iconuser{
-    background-color: lightgray;
+    background-image: url('iconuser.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 50%;
     width: 2.0rem;
     height: 2.0rem;
@@ -38,6 +42,7 @@
     max-height: 2.0rem;
     min-width: 2.0rem;
     min-height: 2.0rem;
+    padding: 0 5%;
 }
 
 #usericon{
@@ -258,23 +263,90 @@ main .titulopag {
     font-weight: 1000;
     color: var(--cor-fonte);
     text-align: left;
-    padding: 0 5%;
+    padding: 0 2%;
 }
 
 .graficos {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; 
     align-items: center;
-    margin-top: 1rem; 
-    width: 70%;
-    height: auto;
+    width: 1100px;
+    text-align: center;
+    height: 500px;
     background: transparent;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 5px var(--cor-fonte);
     border-radius: 20px;
     border: 2px solid var(--cor-fonte) 20%;
-    padding: 20px 12%;
     margin-left: auto; 
     margin-right: auto; 
 }
 
+.chart1 {
+    margin-right: 2rem;
+    width: 500px;
+    justify-content: flex-start;
+    height: 500px;
+    margin-left: 2rem;
+    background: transparent;
+}
+
+.chart1 h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--cor-fonte);
+    text-align: left;
+    margin-top: 4rem;
+    padding: 0 6%;
+    overflow: hidden;
+}
+
+.chart2 {
+    background: transparent;
+    margin-right: 30px;
+    margin-top: 3rem;
+    margin-right: 60px;
+}
+
+.chart1,
+.chart2 {
+    flex: 1; /* Add this line to make both charts take equal space */
+}
+
+
+.tabela-relatorio h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: var(--cor-fonte);
+    padding: 0 12%;
+}
+
+#tabelaDados {
+    width: 450px;
+    height: 350px;
+    background: transparent;
+    text-align: center;
+    margin-left: 4rem;
+    border: 2px solid var(--cor-fonte);
+    border-radius: 20px;
+}
+
+#tabelaDados thead {
+    height: 30px;
+}
+
+#tabelaDados th {
+    border-bottom: 2px solid var(--cor-fonte);
+}
+
+#tabelaDados th .th1 {
+    border-right: 2px solid var(--cor-fonte);
+    border-bottom: 2px solid var(--cor-fonte);
+}
+
+#tabelaDados td {
+    border-bottom: 1px solid #C5C8B7;  
+    padding: 5px; /* Espaçamento interno das células */
+    text-align: left; /* Alinhamento do texto nas células */
+}

@@ -325,3 +325,9 @@ main {
         width: 80%; /* Reduz a largura do botão */
     }
 }
+
+@media screen and (min-width: 1499px) {
+    .prop-text h1 {
+        font-size: 60px;
+    }
+}

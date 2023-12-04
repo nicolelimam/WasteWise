@@ -27,7 +27,7 @@
         <!--Chamando o script que muda o tema da página-->
         <script src="mudartema.js"></script>
         <main>
-            <form class="form-cad" action="">
+            <form method="post" class="form-cad" action="">
                 <h1>CRIE SUA CONTA</h1>
                 <div class="input-box">
                     <label class="lbform">Insira seu nome</label><br>
@@ -48,13 +48,8 @@
                     <span id="message"></span><br>
                 </div>
                 <div class="btn-form">
-                    <button type="submit" class="criar-conta" onclick="redirecionarPag()">Criar conta</button><br>  
+                    <button type="submit" class="criar-conta">Criar conta</button><br>  
                     <button type="reset" class="cancelar">Cancelar</button>
-                    <script>
-                        function redirecionarPag() { 
-                            window.location.href = "homecomprador.php";
-                        }
-                    </script>
                 </div>
                 <div class="alt">
                     <h4>Já tem uma conta?</h4><a href="loginusuario.php">Fazer login</a>
@@ -63,3 +58,51 @@
         </main>
 </body>
 </html>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['campoSenha']) && isset($_POST['confirmaSenha'])) {
+        
+        $senha1 = $_POST['campoSenha'];
+        $senha2 = $_POST['confirmaSenha'];
+
+        if ($senha1 == $senha2) {
+            $nome = $_POST['campoNome'];
+            $email = $_POST['campoEmail'];
+            $senha = $_POST['campoSenha'];
+            $senhaHashed = password_hash($senha, PASSWORD_DEFAULT);
+            $perfil = 1;
+
+            $conn = new mysqli("localhost", "root", "", "WastWise");
+
+            $sql = "INSERT INTO Cliente (nomeCliente, emailCliente, senhaCliente, perfilCliente) VALUES ('$nome', '$email', '$senhaHashed', $perfil)";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "Dados inseridos com sucesso!";
+            } else {
+                echo "Erro ao inserir dados: " . $conn->error;
+            }
+
+            $sql_select = "SELECT * FROM Cliente";
+            $result = $conn->query($sql_select);
+
+            if ($result->num_rows > 0) {
+
+                while($row = $result->fetch_assoc()) {
+                    session_start();
+                    $_SESSION['idc'] = $row["idCliente"];
+                    $_SESSION['nomec'] = $row["nomeCliente"];
+                    $_SESSION['emailc'] = $row["emailCliente"];
+                    $_SESSION['senhac'] = $row["senhaCliente"];
+                    $_SESSION['perfilc'] = $row["perfilCliente"];
+                }
+            }   header('Location: homecomprador.php');
+        } else {
+            echo "As senhas não coincidem. Por favor, tente novamente.";
+        }
+    } else {
+        echo "Certifique-se de preencher ambos os campos de senha.";
+    }
+}
+    $conn->close();
+?>

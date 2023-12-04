@@ -27,16 +27,16 @@
     <script src="mudartema.js"></script>
 
     <main>
-        <form class="form-vinc" action="">
+        <form method="post" class="form-vinc" action="">
             <h3>VINCULAR NOVA LIXEIRA À CONTA</h3>
             <h4>Você pode vincular quantos produtos quiser à sua conta e aproveitar todos os benefícios que a WasteWise oferece!</h4>
             <div class="form-cod">
                 <h5>CÓDIGO SERIAL</h5>
                 <h6>Insira abaixo o código serial da sua lixeira</h6>
-                <input type="text" id="campoCodSerial">
+                <input type="text" name="campoSerial" id="campoCodSerial">
             </div>
             <div class="form-btns">
-                <input type="submit" id="btnVincular" value="Vincular">
+                <input type="submit" id="btnVincular" name="btnVincular" value="Vincular">
                 <br>
                 <input type="reset" id="btnCancelar" value="Cancelar">
             </div>
@@ -45,3 +45,37 @@
     
 </body>
 </html>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['btnVincular'])) {
+        
+        session_start();
+        $email = $_SESSION['emailc'];
+        $id = $_SESSION['idc'];
+        $serial = $_POST['campoSerial'];
+
+            $conn = new mysqli("localhost", "root", "", "WastWise");
+
+            $sql1 = "UPDATE Cliente SET perfilCliente = 2 WHERE emailCliente = '$email'";
+
+            if ($conn->query($sql1) === TRUE) {
+                echo "Dados inseridos com sucesso!";
+            } else {
+                echo "Erro ao inserir dados: " . $conn->error;
+            }
+
+            $sql2 = "UPDATE MinhasLixeiras SET statusLixeira = 2 WHERE idCliente = $id and CodigoSerial = '$serial'";
+
+            if ($conn->query($sql2) === TRUE) {
+                echo "Dados inseridos com sucesso!";
+            } else {
+                echo "Erro ao inserir dados: " . $conn->error;
+            }
+        
+    } else {
+        echo "Certifique-se de preencher ambos os campos de senha.";
+    }
+}
+    $conn->close();
+?>
