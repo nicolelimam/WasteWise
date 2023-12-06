@@ -34,7 +34,13 @@
 
         <?php
         $conn = new mysqli("localhost", "root", "", "WastWise");
-        $sql = "SELECT * FROM DadosArduino WHERE idMinhasLixeiras = 1";
+        session_start();
+        $id= $_SESSION['idc'];
+
+        $sql="SELECT DadosArduino.volume, DadosArduino.date
+        FROM DadosArduino JOIN MinhasLixeiras ON DadosArduino.idMinhasLixeiras = MinhasLixeiras.idMinhasLixeiras 
+        JOIN Cliente ON MinhasLixeiras.idCliente = Cliente.idCliente WHERE Cliente.idCliente = $id";
+        
         $buscar = mysqli_query($conn, $sql);
 
         while ($dados = mysqli_fetch_array($buscar)) {
@@ -120,12 +126,13 @@
               </thead>
               <tbody>
               <?php
-                $sql = "SELECT Lixeira.modelo, Lixeira.capacidade
-                        FROM Lixeira
-                        JOIN MinhasLixeiras ON Lixeira.codigoSerial = MinhasLixeiras.CodigoSerial
-                        WHERE MinhasLixeiras.idMinhasLixeiras = 1";
+
+                $sql1 = "SELECT Lixeira.modelo, Lixeira.capacidade FROM Lixeira 
+                        JOIN MinhasLixeiras ON Lixeira.codigoSerial = MinhasLixeiras.CodigoSerial 
+                        JOIN Cliente ON MinhasLixeiras.idCliente = Cliente.idCliente 
+                        WHERE Cliente.idCliente = $id and MinhasLixeiras.statusLixeira = 2";
                 
-                $busca = mysqli_query($conn, $sql);
+                $busca = mysqli_query($conn, $sql1);
 
                 while ($dados = mysqli_fetch_array($busca)) {
                     $modelo = $dados['modelo'];
