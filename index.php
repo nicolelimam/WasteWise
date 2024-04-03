@@ -21,27 +21,36 @@
             <i class="ri-menu-line" id="menu-icon"></i>
         </div>
     </header>
-    <script src="mudartema.js"></script>
-
     <main>
+        <div class="propaganda-container">
             <div class="propaganda">
                 <div class="prop-text">
                     <h1>GERENCIE SEUS GASTOS E PRODUÇÃO DE LIXO</h1>
                     <h3>Confira nossa lixeira inteligente e descubra a solução para controlar o desperdício e automatizar sua rotina.</h3>
-                    <div class="btn-confprod">
-                        <a href="confprod.html">Conferir produtos</a><i class='bx bx-play'></i>
-                    </div>
-                </div>
-                <div class="prop-alt">
-                    <h4>Ainda não tem uma conta?</h4>
-                    <a href="cadastrarusuario.php">Criar uma conta.</a>
-                    <h4>Ou ao invés disso:</h4>
-                    <a href="loginusuario.php">Entrar em sua conta.</a>
+                    <a href="confprod.php" class="btn-confprod">Conferir produtos <i class='bx bx-chevron-right'></i></a>
                 </div>
             </div>
             <div class="prop-img">
-                <img src="lixeiravetor1.png" alt="" class="img-prop">
+                <img src="Imagens/bin-img.png" alt="" class="img-prop">
             </div>
+        </div>
     </main>  
+
+    <!-- PARTE PARA O SITE EM EXIBIÇÃO MOBILE -->
+    <div class="mobile-container">
+        <div class="img-pag">
+            <img src="Imagens/bin-img.png" alt="" class="img-mobile">
+        </div>
+        <div class="content">
+            <h1>GERENCIE SEUS GASTOS E PRODUÇÃO DE LIXO</h1>
+            <h3>Confira nossa lixeira inteligente e descubra a solução para controlar o desperdício e automatizar sua rotina.</h3>
+            <a href="confprod.php" class="btn-confprod2">Conferir produtos <i class='bx bx-chevron-right'></i></a>
+            <br>
+            <p>Outras opções</p>
+            <button id="btn-login" class="btn-mobile">Fazer login</button>
+            <button id="btn-cadastro" class="btn-mobile">Cadastre-se</button>
+        </div>
+    </div>
   </body>
+  <script src="Js/mudartema.js"></script>
 </html>
