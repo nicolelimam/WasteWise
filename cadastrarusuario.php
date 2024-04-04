@@ -11,52 +11,41 @@
     <title>Cadastre-se</title>
 </head>
 <body>
-        <header> <!-- Cabeçalho da página/barra de navegação-->
-            <a href="#" class="logo"><img src="bin-icon3.png" class="img-logo"/></i><span>WasteWise</span></a>
+<div class="navbar">
+            <button id="btnTheme">Ok</button>
+        </div>
+        <div class="container">
+            <div class="left-login">
+                <h1>Cadastre-se <br>E acesse todos os recursos da WasteWise</h1>
+                <img class="left-login-imagem" src="Imagens/img-login-animada.svg" alt="Imagem de login">
+            </div>
+            <div class="right-login">
+                    <div class="card-login">
+                        <h1>Cadastro</h1> 
+                        <div class="textfield">
+                            <label for="campoNome">Nome</label>
+                            <input type="text" name="campoNome" placeholder="Nome">
+                        </div>
+                        <div class="textfield">
+                            <label for="email">Email</label>
+                            <input type="email" name="campoEmail" placeholder="Email">
+                        </div>
+                        <div class="textfield">
+                            <label for="campoSenha">Senha</label>
+                            <input type="password" name="campoSenha" placeholder="Senha">
+                        </div>
+                        <div class="textfield">
+                            <label for="confirmaSenha">Confirmação de senha</label>
+                            <input type="password" name="confirmaSenha" placeholder="Repita a senha">
+                        </div>
+                        <button type="submit" class="criar-conta">Criar conta</button>
+                    </div>
+            </div>
+        </div>
 
-            <div class="navbar">
-                <button id="btnTheme">Ok</button>
-                <a href="#" onclick="voltarPagina()">Voltar</a>
-            </div> 
-        </header>
-        <script>
-            function voltarPagina() {
-                window.history.back();
-            }
-        </script>
-        <!--Chamando o script que muda o tema da página-->
-        <script src="mudartema.js"></script>
-        <main>
-            <form method="post" class="form-cad" action="">
-                <h1>CRIE SUA CONTA</h1>
-                <div class="input-box">
-                    <label class="lbform">Insira seu nome</label><br>
-                    <input type="text" name="campoNome" class="campotxt"><br>
-                </div>
-                <div class="input-box">
-                    <label class="lbform">Insira seu e-mail</label><br>
-                    <input type="text" name="campoEmail" class="campotxt"><br>
-                </div>
-                <div class="input-box">
-                    <label class="lbform">Crie uma senha</label><br>
-                    <input type="password" name="campoSenha" class="campotxt"><br>
-                    <span id="message"></span>
-                </div>
-                <div class="input-box">
-                    <label class="lbform">Confirme sua senha</label><br>
-                    <input type="password" name="confirmaSenha" class="campotxt"><br>
-                    <span id="message"></span><br>
-                </div>
-                <div class="btn-form">
-                    <button type="submit" class="criar-conta">Criar conta</button><br>  
-                    <button type="reset" class="cancelar">Cancelar</button>
-                </div>
-                <div class="alt">
-                    <h4>Já tem uma conta?</h4><a href="loginusuario.php">Fazer login</a>
-                </div>
-            </form>
-        </main>
+
 </body>
+<script src="Js/mudartema.js"></script>
 </html>
 
 <?php
@@ -101,7 +90,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "As senhas não coincidem. Por favor, tente novamente.";
         }
     } else {
-        echo "Certifique-se de preencher ambos os campos de senha.";
+        //echo "Certifique-se de preencher ambos os campos de senha.";
+        echo "";
     }
 }
     $conn->close();

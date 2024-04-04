@@ -11,9 +11,9 @@
     <title>Login</title>
 </head>
 <body>
-        <div class="navbar">
-            <button id="btnTheme">Ok</button>
-        </div>
+    <div class="navbar">
+        <button id="btnTheme">Ok</button>
+    </div>
     <div class="container">
         <div class="left-login">
             <h1>Faça login <br>E acesse todos os recursos da WasteWise</h1>
@@ -23,11 +23,11 @@
                 <div class="card-login">
                     <h1>Login</h1> 
                     <div class="textfield">
-                        <label for="email">Email</label>
-                        <input type="email" name="campoEmail" placeholder="Usuário">
+                        <label for="campoEmail">Email</label>
+                        <input type="email" name="campoEmail" placeholder="Email">
                     </div>
                     <div class="textfield">
-                        <label for="senha">Senha</label>
+                        <label for="campoSenha">Senha</label>
                         <input type="password" name="campoSenha" placeholder="Senha">
                     </div>
                     <button class="btn-login" name="btnEntrar">Entrar</button>
